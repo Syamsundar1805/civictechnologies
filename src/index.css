@@ -69,6 +69,11 @@ body {
 */
 @supports (-webkit-touch-callout: none) {
   .bg-fixed {
+    /* iOS disables fixed attachments for cover sizes. We fall back to scroll 
+       but use JavaScript (App.tsx) to smoothly animate background-position-y */
     background-attachment: scroll !important;
+    background-position-x: center !important;
+    background-size: cover !important;
+    will-change: background-position;
   }
 }
