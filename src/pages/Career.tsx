@@ -2,6 +2,7 @@
 import React, { useState } from 'react';
 import { useLocation } from 'react-router-dom';
 import ScrollToTopArrow from '../components/common/ScrollToTopArrow';
+import ParallaxBackground from '../components/common/ParallaxBackground';
 import { motion } from 'framer-motion';
 import { useInView } from 'react-intersection-observer';
 import { Button, TextField, Box, CircularProgress } from '@mui/material';
@@ -164,10 +165,7 @@ const Career: React.FC = () => {
             <section className="relative min-h-[60vh] flex items-center justify-center">
 
                 {/* Background Image with Grayscale Filter */}
-                <div
-                    className="absolute inset-0 bg-fixed bg-center bg-cover"
-                    style={{ backgroundImage: `url(${HeroBg})` }}
-                ></div>
+                <ParallaxBackground src={HeroBg} />
                 <div className="absolute inset-0 bg-gradient-to-r from-black/90 via-black/40 to-transparent"></div>
 
                 <div className="container mx-auto px-4 lg:px-8 relative z-10 text-center lg:text-left py-20">

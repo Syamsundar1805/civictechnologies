@@ -1,6 +1,7 @@
 // src/pages/Projects.tsx
 import { useState } from "react";
 import ScrollToTopArrow from "../components/common/ScrollToTopArrow";
+import ParallaxBackground from "../components/common/ParallaxBackground";
 import HeroBg from "../assets/clintlogos/hero_bg_img.webp";
 import DividerImg from "../assets/clintlogos/download.svg";
 import ProjectCard from "../components/projects/ProjectCard";
@@ -39,10 +40,7 @@ const Projects: React.FC = () => {
       <section className="relative min-h-[60vh] flex items-center justify-center">
 
         {/* Background Image with Grayscale Filter */}
-        <div
-          className="absolute inset-0 bg-fixed bg-center bg-cover"
-          style={{ backgroundImage: `url(${HeroBg})` }}
-        ></div>
+        <ParallaxBackground src={HeroBg} />
         {/* Overlay */}
         <div className="absolute inset-0 bg-gradient-to-r from-black/90 via-black/40 to-transparent"></div>
 

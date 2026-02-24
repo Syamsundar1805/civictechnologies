@@ -12,55 +12,11 @@ import Contact from './pages/Contact';
 import Career from './pages/Career';
 import { motion } from 'framer-motion';
 import ScrollToTop from './components/common/ScrollToTop';
-import { useEffect } from 'react';
-import { useLocation } from 'react-router-dom';
-
-function IosParallaxFix() {
-  const location = useLocation();
-
-  useEffect(() => {
-    const isIOS = /iPad|iPhone|iPod/.test(navigator.userAgent) ||
-      (navigator.userAgent.includes("Mac") && "ontouchend" in document);
-    if (!isIOS) return;
-
-    let ticking = false;
-    const updateParallax = () => {
-      const fixedElements = document.querySelectorAll('.bg-fixed') as NodeListOf<HTMLElement>;
-      fixedElements.forEach(el => {
-        const rect = el.getBoundingClientRect();
-        if (rect.top <= window.innerHeight && rect.bottom >= 0) {
-          const totalDistance = window.innerHeight + rect.height;
-          const scrolledPercent = (window.innerHeight - rect.top) / totalDistance;
-          const yPos = Math.max(0, Math.min(100, scrolledPercent * 100)).toFixed(2);
-          el.style.backgroundPositionY = `${yPos}%`;
-        }
-      });
-      ticking = false;
-    };
-
-    const onScroll = () => {
-      if (!ticking) {
-        window.requestAnimationFrame(updateParallax);
-        ticking = true;
-      }
-    };
-
-    window.addEventListener('scroll', onScroll, { passive: true });
-    // Run immediately when route changes to setup images before scrolling
-    // A small timeout ensures React Router DOM has flushed the new page elements.
-    setTimeout(updateParallax, 50);
-
-    return () => window.removeEventListener('scroll', onScroll);
-  }, [location.pathname]);
-
-  return null;
-}
 
 function App() {
   return (
     <Router>
       <ScrollToTop />
-      <IosParallaxFix />
       <div className="App">
         <Navbar />
         <motion.div

@@ -60,20 +60,3 @@ body {
 .group:hover .group-hover\:rotate-y-180 {
   transform: rotateY(180deg);
 }
-
-/* 
-  IOS PARALLAX FIX
-  iOS devices (Safari, Chrome, etc.) have a known bug with 'background-attachment: fixed',
-  causing the background to scale up massively and become blurred/pixelated.
-  This @supports rule specifically targets iOS WebKit engine and overrides the behavior to 'scroll'.
-*/
-@supports (-webkit-touch-callout: none) {
-  .bg-fixed {
-    /* iOS disables fixed attachments for cover sizes. We fall back to scroll 
-       but use JavaScript (App.tsx) to smoothly animate background-position-y */
-    background-attachment: scroll !important;
-    background-position-x: center !important;
-    background-size: cover !important;
-    will-change: background-position;
-  }
-}

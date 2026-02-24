@@ -4,6 +4,7 @@ import { useInView } from 'react-intersection-observer';
 import { Outlet, Link } from 'react-router-dom'; // Added Link
 import React from 'react';
 import ScrollToTopArrow from '../components/common/ScrollToTopArrow';
+import ParallaxBackground from '../components/common/ParallaxBackground';
 import ElectricalServicesIcon from '@mui/icons-material/ElectricalServices';
 import AcUnitIcon from '@mui/icons-material/AcUnit';
 import SettingsRemoteIcon from '@mui/icons-material/SettingsRemote';
@@ -154,10 +155,7 @@ const Services: React.FC = () => {
             <section className="relative min-h-[60vh] flex items-center justify-center">
 
                 {/* Background Image with Grayscale Filter */}
-                <div
-                    className="absolute inset-0 bg-fixed bg-center bg-cover"
-                    style={{ backgroundImage: `url(${HeroBg})` }}
-                ></div>
+                <ParallaxBackground src={HeroBg} />
                 <div className="absolute inset-0 bg-gradient-to-r from-black/90 via-black/40 to-transparent"></div>
 
                 <div className="container mx-auto px-4 lg:px-8 relative z-10 text-center lg:text-left py-20">
@@ -311,12 +309,7 @@ const Services: React.FC = () => {
 
                                 {/* IMAGE SECTION */}
                                 <div className="w-full h-[250px] md:h-[350px] lg:h-[450px] relative overflow-hidden">
-                                    <div
-                                        className="absolute inset-0 bg-cover bg-center bg-fixed"
-                                        style={{
-                                            backgroundImage: `url(${service.image})`
-                                        }}
-                                    />
+                                    <ParallaxBackground src={service.image} />
                                     <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent" />
                                 </div>
 

@@ -2,6 +2,7 @@
 import { motion } from 'framer-motion';
 import { useInView } from 'react-intersection-observer';
 import ScrollToTopArrow from '../components/common/ScrollToTopArrow';
+import ParallaxBackground from '../components/common/ParallaxBackground';
 import HeroBg from '../assets/clintlogos/hero_bg_img.webp'; // Imported the Hero Image
 import DividerImg from '../assets/clintlogos/download.svg';
 import BannerImg from '../assets/clintlogos/about_bg.webp'; // Imported the Banner Image
@@ -62,10 +63,7 @@ const About: React.FC = () => {
             <section className="relative min-h-[60vh] flex items-center justify-center">
 
                 {/* Background Image with Grayscale Filter */}
-                <div
-                    className="absolute inset-0 bg-fixed bg-center bg-cover"
-                    style={{ backgroundImage: `url(${HeroBg})` }}
-                ></div>
+                <ParallaxBackground src={HeroBg} />
 
                 {/* Overlay */}
                 <div className="absolute inset-0 bg-gradient-to-r from-black/90 via-black/40 to-transparent"></div>
@@ -292,9 +290,9 @@ const About: React.FC = () => {
 
                 {/* Sticky Background Banner */}
                 <div
-                    className="relative h-[40vh] flex items-center justify-center bg-fixed bg-center bg-cover"
-                    style={{ backgroundImage: `url(${BannerImg})` }}
+                    className="relative h-[40vh] flex items-center justify-center"
                 >
+                    <ParallaxBackground src={BannerImg} />
 
                     {/* Overlay */}
                     {/* <div className="absolute inset-0 bg-gradient-to-r from-black/30 via-black/40 to-black/30"></div> */}

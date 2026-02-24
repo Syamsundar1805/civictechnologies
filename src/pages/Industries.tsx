@@ -2,6 +2,7 @@
 import { motion } from 'framer-motion';
 import { useInView } from 'react-intersection-observer';
 import ScrollToTopArrow from '../components/common/ScrollToTopArrow';
+import ParallaxBackground from '../components/common/ParallaxBackground';
 import ScienceIcon from '@mui/icons-material/Science';
 import LocalHospitalIcon from '@mui/icons-material/LocalHospital';
 import BiotechIcon from '@mui/icons-material/Biotech';
@@ -143,10 +144,7 @@ const Industries: React.FC = () => {
             <section className="relative min-h-[60vh] flex items-center justify-center">
 
                 {/* Background Image with Grayscale Filter */}
-                <div
-                    className="absolute inset-0 bg-fixed bg-center bg-cover"
-                    style={{ backgroundImage: `url(${HeroBg})` }}
-                ></div>
+                <ParallaxBackground src={HeroBg} />
                 <div className="absolute inset-0 bg-gradient-to-r from-black/90 via-black/40 to-transparent"></div>
 
                 <div className="container mx-auto px-4 lg:px-8 relative z-10 text-center lg:text-left py-20">
@@ -233,12 +231,7 @@ const Industries: React.FC = () => {
                                 {/* IMAGE SIDE */}
                                 <div className={`${isEven ? 'lg:order-1' : 'lg:order-2'} relative h-[250px] lg:h-[500px] overflow-hidden -mx-4 w-[calc(100%+2rem)] lg:w-full lg:mx-0`}>
                                     <div className="sticky top-24 h-full w-full">
-                                        <div
-                                            className="absolute inset-0 bg-cover bg-center bg-fixed rounded-none"
-                                            style={{
-                                                backgroundImage: `url(${industry.image})`
-                                            }}
-                                        />
+                                        <ParallaxBackground src={industry.image} className="absolute inset-0 rounded-none" />
                                         <div className="absolute inset-0 rounded-none" />
 
                                         <div className="absolute inset-0 flex items-center justify-center text-center px-6">

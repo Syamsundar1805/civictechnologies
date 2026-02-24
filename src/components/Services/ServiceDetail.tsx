@@ -2,6 +2,7 @@
 import React from "react";
 import { useParams, useNavigate } from "react-router-dom";
 import { motion } from "framer-motion";
+import ParallaxBackground from "../common/ParallaxBackground";
 import CheckCircleOutlineIcon from "@mui/icons-material/CheckCircleOutline";
 import ElectricalServicesIcon from '@mui/icons-material/ElectricalServices';
 import AcUnitIcon from '@mui/icons-material/AcUnit';
@@ -222,9 +223,9 @@ const ServiceDetail = () => {
 
       {/* HERO SECTION */}
       <section
-        className="relative min-h-[60vh] flex items-center justify-center bg-fixed bg-center bg-cover"
-        style={{ backgroundImage: `url(${service.heroImage})` }}
+        className="relative min-h-[60vh] flex items-center justify-center"
       >
+        <ParallaxBackground src={service.heroImage} />
         {/* Overlay */}
         <div className="absolute inset-0 bg-gradient-to-r from-black/70 via-black/50 to-transparent"></div>
 
