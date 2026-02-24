@@ -13,37 +13,25 @@ import Career from './pages/Career';
 import { motion } from 'framer-motion';
 import ScrollToTop from './components/common/ScrollToTop';
 import { useEffect } from 'react';
+import { useLocation } from 'react-router-dom';
 
-function App() {
-  // iOS Parallax Fix
+function IosParallaxFix() {
+  const location = useLocation();
+
   useEffect(() => {
-    // Detect iOS devices
     const isIOS = /iPad|iPhone|iPod/.test(navigator.userAgent) ||
       (navigator.userAgent.includes("Mac") && "ontouchend" in document);
-
     if (!isIOS) return;
 
     let ticking = false;
-
     const updateParallax = () => {
       const fixedElements = document.querySelectorAll('.bg-fixed') as NodeListOf<HTMLElement>;
-
       fixedElements.forEach(el => {
         const rect = el.getBoundingClientRect();
-        // Check if element is in viewport
         if (rect.top <= window.innerHeight && rect.bottom >= 0) {
-          // Calculate how far the element has scrolled through the viewport (0 to 1)
-          const viewportHeight = window.innerHeight;
-          const totalDistance = viewportHeight + rect.height;
-          // Percentage scrolled: from 0 (just entering bottom) to 1 (just leaving top)
-          const scrolledPercent = (viewportHeight - rect.top) / totalDistance;
-
-          // Move the background Y position based on scroll percentage.
-          // Native background-attachment: fixed keeps it perfectly still.
-          // To emulate, we move it exactly opposite to the scroll direction slightly.
-          // Typical parallax speeds are around 50% movement relative to scroll.
-          // A Y-position from 0% to 100% works best for cover images.
-          const yPos = (scrolledPercent * 100).toFixed(2);
+          const totalDistance = window.innerHeight + rect.height;
+          const scrolledPercent = (window.innerHeight - rect.top) / totalDistance;
+          const yPos = Math.max(0, Math.min(100, scrolledPercent * 100)).toFixed(2);
           el.style.backgroundPositionY = `${yPos}%`;
         }
       });
@@ -58,15 +46,21 @@ function App() {
     };
 
     window.addEventListener('scroll', onScroll, { passive: true });
-    // Initial call
-    updateParallax();
+    // Run immediately when route changes to setup images before scrolling
+    // A small timeout ensures React Router DOM has flushed the new page elements.
+    setTimeout(updateParallax, 50);
 
     return () => window.removeEventListener('scroll', onScroll);
-  }, []);
+  }, [location.pathname]);
 
+  return null;
+}
+
+function App() {
   return (
     <Router>
       <ScrollToTop />
+      <IosParallaxFix />
       <div className="App">
         <Navbar />
         <motion.div
