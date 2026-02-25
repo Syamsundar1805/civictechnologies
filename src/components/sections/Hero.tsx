@@ -17,6 +17,8 @@ import KeyboardArrowDownIcon from '@mui/icons-material/KeyboardArrowDown';
 
 // Added image import for the About section
 import HeroBg from '../../assets/industry_images/AboutIMG.webp';
+import HomeBgImage from '../../assets/clintlogos/home_bg_img.webp';
+import LogoWatermark from '../../assets/clintlogos/hero_bg_watermark.svg';
 
 const Hero: React.FC = () => {
     const containerRef = useRef<HTMLElement>(null);
@@ -110,8 +112,8 @@ const Hero: React.FC = () => {
         if (inView) {
             const interval = setInterval(() => {
                 setCounters(prev => ({
-                    years: prev.years < 14 ? prev.years + 1 : 14,
-                    projects: prev.projects < 38 ? prev.projects + 1 : 38,
+                    years: prev.years < 16 ? prev.years + 1 : 16,
+                    projects: prev.projects < 100 ? prev.projects + 2 : 100,
                     countries: prev.countries < 2 ? prev.countries + 1 : 2,
                     clients: prev.clients < 50 ? prev.clients + 1 : 50
                 }));
@@ -162,25 +164,21 @@ const Hero: React.FC = () => {
     if (hasPlayed) {
         return (
             <>
-                <section ref={inViewRef} className="relative min-h-screen flex items-center overflow-hidden bg-white pt-20">
-                    <div className="absolute inset-0 z-0 overflow-hidden pointer-events-none">
-                        {watermarks.map((item, index) => (
-                            <motion.div
-                                key={index}
-                                className="absolute text-[#0177B2]/20"
-                                style={{ top: item.top, left: item.left, willChange: "transform, opacity" }}
-                                animate={{ x: [0, 30, -20, 0], y: [0, -40, 20, 0], rotate: [0, 10, -10, 0], scale: [1, 1.1, 0.9, 1] }}
-                                transition={{ duration: item.duration, repeat: Infinity, ease: "linear", delay: index * 2 }}
-                            >
-                                <item.Icon sx={{ fontSize: item.size }} />
-                            </motion.div>
-                        ))}
+                <section ref={inViewRef} className="relative min-h-screen flex items-center overflow-hidden pt-20">
+                    <div className="absolute inset-0 z-0 opacity-100 pointer-events-none">
+                        <img src={HomeBgImage} alt="Background" className="w-full h-full object-cover" />
+                        <div className="absolute inset-0 bg-white mix-blend-multiply"></div>
+
+                        {/* Watermark */}
+                        <div className="absolute inset-0 flex justify-center items-center opacity-15">
+                            <img src={LogoWatermark} alt="Watermark" className="w-[80vw] max-w-[800px] h-auto object-contain" />
+                        </div>
                     </div>
 
                     <div className="container mx-auto px-6 py-6 relative z-10 w-full">
                         <div className="flex flex-col items-center text-center w-full mt-[5vh] lg:mt-[8vh]">
                             <motion.h2
-                                className="text-[50px] sm:text-[80px] md:text-[120px] lg:text-[160px] text-[#0177B2] leading-none whitespace-nowrap tracking-wide plaster-regular"
+                                className="text-[30px] sm:text-[50px] md:text-[70px] lg:text-[100px] text-[#0177B2] leading-none whitespace-nowrap tracking-normal plaster-regular"
                                 initial={{ opacity: 0, y: 30 }}
                                 whileInView={{ opacity: 1, y: 0 }}
                                 viewport={{ once: true }}
@@ -190,7 +188,7 @@ const Hero: React.FC = () => {
                             </motion.h2>
 
                             <motion.h4
-                                className="font-primary font-black uppercase text-gray-900 text-[20px] md:text-[32px] lg:text-[56px] xl:text-[64px] leading-[1] mt-2 md:-mt-3 mb-6 tracking-[0.05em]"
+                                className="font-primary font-black uppercase text-[#252525] text-[20px] md:text-[32px] lg:text-[56px] xl:text-[64px] leading-[1] mt-2 md:-mt-3 mb-6 tracking-[0.05em]"
                                 initial={{ opacity: 0, scale: 0.95 }}
                                 whileInView={{ opacity: 1, scale: 1 }}
                                 viewport={{ once: true }}
@@ -206,7 +204,7 @@ const Hero: React.FC = () => {
                                 viewport={{ once: true }}
                                 transition={{ duration: 0.8, ease: "easeOut", delay: 0.5 }}
                             >
-                                INDUSTRIAL INFRASTRUCTURE WITH TURNKEY ELECTRONICS SOLUTIONS
+                                INDUSTRIAL INFRASTRUCTURE WITH ELECTRICAL TURNKEY SOLUTIONS
                             </motion.p>
 
                             <div className="grid grid-cols-2 md:grid-cols-4 gap-6 max-w-4xl mt-12 w-full px-6">
@@ -253,11 +251,11 @@ const Hero: React.FC = () => {
                             >
                                 About
                             </h2>
-                            <h3 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-bold text-gray-900 mb-4 sm:mb-6 font-primary uppercase tracking-wide">
+                            <h3 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-bold text-[#252525] mb-4 sm:mb-6 font-primary uppercase tracking-wide">
                                 Civic Technologies
                             </h3>
                             <p className="text-sm sm:text-base md:text-lg text-gray-600 leading-relaxed font-medium mb-4 sm:mb-6">
-                                Established with a vision to provide world-class industrial infrastructure and turnkey electronics solutions. With over a decade of excellence, we have proven our capabilities in delivering major projects across diverse sectors.
+                                Established with a vision to provide world-class industrial infrastructure and electrical turnkey solutions. With over a decade of excellence, we have proven our capabilities in delivering major projects across diverse sectors.
                             </p>
                             <p className="text-sm sm:text-base md:text-lg text-gray-600 leading-relaxed font-medium hidden sm:block mb-6 md:mb-8">
                                 Our commitment to quality, safety, and innovation makes us a trusted partner for clients globally, building state-of-the-art facilities that empower the future of industries.
@@ -293,30 +291,17 @@ const Hero: React.FC = () => {
     return (
         <section ref={containerRef} className="relative h-[300vh] bg-white">
             <div className="sticky top-0 h-screen w-full overflow-hidden">
+                <div className="absolute inset-0 z-0 opacity-100 pointer-events-none">
+                    <img src={HomeBgImage} alt="Background" className="w-full h-full object-cover" />
+                    <div className="absolute inset-0 bg-white/10 mix-blend-multiply"></div>
+
+                    {/* Watermark */}
+                    <div className="absolute inset-0 flex justify-center items-center opacity-15">
+                        <img src={LogoWatermark} alt="Watermark" className="w-[80vw] max-w-[800px] h-auto object-contain" />
+                    </div>
+                </div>
 
                 <div ref={inViewRef} className="absolute inset-0 z-0 pointer-events-none">
-                    {/* MOVING WATERMARK BACKGROUND */}
-                    {watermarks.map((item, index) => (
-                        <motion.div
-                            key={index}
-                            className="absolute text-[#0177B2]/20"
-                            style={{ top: item.top, left: item.left, willChange: "transform, opacity" }}
-                            animate={{
-                                x: [0, 30, -20, 0],
-                                y: [0, -40, 20, 0],
-                                rotate: [0, 10, -10, 0],
-                                scale: [1, 1.1, 0.9, 1],
-                            }}
-                            transition={{
-                                duration: item.duration,
-                                repeat: Infinity,
-                                ease: "linear",
-                                delay: index * 2,
-                            }}
-                        >
-                            <item.Icon sx={{ fontSize: item.size }} />
-                        </motion.div>
-                    ))}
                 </div>
 
                 {/* Hero Initial Content Wrapper */}
@@ -327,14 +312,14 @@ const Hero: React.FC = () => {
                             {/* "Welcome" Text Wrapper */}
                             <div className="relative z-30 flex justify-center w-full">
                                 {/* Invisible dummy content to preserve layout space */}
-                                <h2 className="text-[50px] sm:text-[80px] md:text-[120px] lg:text-[160px] leading-none whitespace-nowrap tracking-wide plaster-regular opacity-0 pointer-events-none">
-                                    <span className="inline-block mx-2">W</span>
-                                    <span className="inline-block mx-2">e</span>
-                                    <span className="inline-block mx-2">l</span>
-                                    <span className="inline-block mx-2">c</span>
-                                    <span className="inline-block mx-2">o</span>
-                                    <span className="inline-block mx-2">m</span>
-                                    <span className="inline-block mx-2">e</span>
+                                <h2 className="text-[30px] sm:text-[50px] md:text-[70px] lg:text-[100px] leading-none whitespace-nowrap tracking-normal plaster-regular opacity-0 pointer-events-none">
+                                    <span className="inline-block mx-0.5">W</span>
+                                    <span className="inline-block mx-0.5">e</span>
+                                    <span className="inline-block mx-0.5">l</span>
+                                    <span className="inline-block mx-0.5">c</span>
+                                    <span className="inline-block mx-0.5">o</span>
+                                    <span className="inline-block mx-0.5">m</span>
+                                    <span className="inline-block mx-0.5">e</span>
                                 </h2>
 
                                 {/* Animated scaling "Welcome" effect */}
@@ -347,18 +332,18 @@ const Hero: React.FC = () => {
                                     className="absolute inset-0 flex justify-center items-center"
                                 >
                                     <motion.h2
-                                        className="text-[50px] sm:text-[80px] md:text-[120px] lg:text-[160px] text-[#0177B2] leading-none whitespace-nowrap tracking-wide plaster-regular"
+                                        className="text-[30px] sm:text-[50px] md:text-[70px] lg:text-[100px] text-[#0177B2] leading-none whitespace-nowrap tracking-normal plaster-regular"
                                         initial={{ opacity: 0, y: 30 }}
                                         animate={{ opacity: 1, y: 0 }}
                                         transition={{ duration: 0.8, ease: "easeOut", delay: 0.8 }}
                                     >
-                                        <span className="inline-block mx-2">W</span>
-                                        <span className="inline-block mx-2">e</span>
-                                        <span className="inline-block mx-2">l</span>
-                                        <span className="inline-block mx-2">c</span>
-                                        <span className="inline-block mx-2">o</span>
-                                        <span className="inline-block mx-2">m</span>
-                                        <span className="inline-block mx-2">e</span>
+                                        <span className="inline-block mx-0.5">W</span>
+                                        <span className="inline-block mx-0.5">e</span>
+                                        <span className="inline-block mx-0.5">l</span>
+                                        <span className="inline-block mx-0.5">c</span>
+                                        <span className="inline-block mx-0.5">o</span>
+                                        <span className="inline-block mx-0.5">m</span>
+                                        <span className="inline-block mx-0.5">e</span>
                                     </motion.h2>
                                 </motion.div>
                             </div>
@@ -380,7 +365,7 @@ const Hero: React.FC = () => {
                                     animate={{ opacity: 1, y: 0 }}
                                     transition={{ duration: 0.8, ease: "easeOut", delay: 1.4 }}
                                 >
-                                    INDUSTRIAL INFRASTRUCTURE WITH TURNKEY ELECTRONICS SOLUTIONS
+                                    INDUSTRIAL INFRASTRUCTURE WITH ELECTRICAL TURNKEY SOLUTIONS
                                 </motion.p>
 
                                 <div className="grid grid-cols-2 md:grid-cols-4 gap-6 max-w-4xl mt-12 w-full px-6">
@@ -444,7 +429,7 @@ const Hero: React.FC = () => {
                                 Civic Technologies
                             </h3>
                             <p className="text-sm sm:text-base md:text-lg text-gray-600 leading-relaxed font-medium mb-4 sm:mb-6">
-                                Established with a vision to provide world-class industrial infrastructure and turnkey electronics solutions. With over a decade of excellence, we have proven our capabilities in delivering major projects across diverse sectors.
+                                Established with a vision to provide world-class industrial infrastructure and electrical turnkey solutions. With over a decade of excellence, we have proven our capabilities in delivering major projects across diverse sectors.
                             </p>
                             <p className="text-sm sm:text-base md:text-lg text-gray-600 leading-relaxed font-medium hidden sm:block mb-6 md:mb-8">
                                 Our commitment to quality, safety, and innovation makes us a trusted partner for clients globally, building state-of-the-art facilities that empower the future of industries.

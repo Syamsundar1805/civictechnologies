@@ -25,19 +25,25 @@ const ProjectsShowcase: React.FC = () => {
 
     const projects = [
         {
-            name: "Maruti Suzuki Battery Plant",
-            client: "Maruti Suzuki",
+            name: "Agratas Energy Storage Solutions Pvt Ltd",
+            client: "TATA",
             location: "Gujarat",
-            image: MarutiImg
+            image: ColgateImg
+        },
+        {
+            name: "Micron Semiconductor Technology India Pvt Ltd",
+            client: "Micron",
+            location: "Gujarat",
+            image: LancoImg
         },
         {
             name: "National Dairy Development Board",
             client: "NDDB",
-            location: "Odisha",
+            location: "New Delhi",
             image: NDDBImg
         },
         {
-            name: "IIT Guwahati Testing Lab",
+            name: "IIT Guwahati Medical Lab",
             client: "IIT Guwahati",
             location: "Assam",
             image: IITImg
@@ -49,17 +55,12 @@ const ProjectsShowcase: React.FC = () => {
             image: NIABImg
         },
         {
-            name: "Colgate Palmolive Process Plant",
-            client: "Colgate Palmolive",
-            location: "Sri City",
-            image: ColgateImg
-        },
-        {
-            name: "Lanco Hills Signature Tower",
-            client: "Lanco Hills",
-            location: "Hyderabad",
-            image: LancoImg
+            name: "TDS Lithium-Ion Battery Gujarat Pvt Ltd",
+            client: "Maruti Suzuki",
+            location: "Gujarat",
+            image: MarutiImg
         }
+
     ];
 
     return (

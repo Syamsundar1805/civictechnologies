@@ -50,7 +50,7 @@ const CTASection: React.FC = () => {
 
                     {/* Description */}
                     <p className="text-lg md:text-xl text-black/80 mb-10 max-w-2xl mx-auto leading-relaxed">
-                        Partner with <span className="text-white">Civic Technologies</span> for turnkey electronics excellence,
+                        Partner with <span className="text-white">Civic Technologies</span> for electrical turnkey excellence,
                         precision-driven execution, and engineering solutions that
                         power industries forward.
                     </p>

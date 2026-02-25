@@ -37,7 +37,7 @@ const About: React.FC = () => {
         {
             year: "2010",
             title: "Foundation & Specialization",
-            description: <><span className="text-[#4FB4DB]">Civic Technologies</span> began as a specialized turnkey electrical solution provider for cleanroom environments, setting the stage for engineering excellence.</>
+            description: <><span className="text-[#4FB4DB]">Civic Technologies</span> began as a specialized electrical turnkey solution provider for cleanroom environments, setting the stage for engineering excellence.</>
         },
         {
             year: "2012-2015",
@@ -134,10 +134,10 @@ const About: React.FC = () => {
                         </div>
 
                         <p className="text-lg text-gray-600 leading-relaxed mb-8">
-                            Established in <span className="font-bold text-[#0177B2]">2010</span>, <span className="text-[#4FB4DB]">Civic Technologies</span> began as a specialized turnkey electrical solution provider for cleanroom environments. Over time, the organization expanded into a full-scale electronics turnkey engineering partner serving pharmaceuticals, healthcare, industrial manufacturing, commercial complexes, research facilities, and infrastructure projects.
+                            Established in <span className="font-bold text-[#0177B2]">2010</span>, <span className="text-[#4FB4DB]">Civic Technologies</span> began as a specialized electrical turnkey solution provider for cleanroom environments. Over time, the organization expanded into a full-scale electrical turnkey engineering partner serving pharmaceuticals, healthcare, industrial manufacturing, semi-conductors, lithium battery manufacturing, commercial complexes, research facilities, and infrastructure projects.
                         </p>
                         <p className="text-lg text-gray-600 leading-relaxed">
-                            Today, we stand as a trusted engineering partner delivering turnkey electronics excellence with accountability, technical depth, and corporate integrity.
+                            Today, we stand as a trusted engineering partner delivering electrical turnkey excellence with accountability, technical depth, and corporate integrity.
                         </p>
                     </motion.div>
                 </div>
@@ -245,7 +245,7 @@ const About: React.FC = () => {
                 </p>
 
                 <p className="text-gray-600 leading-relaxed text-lg mt-6">
-                    <span className="text-[#4FB4DB]">Civic Technologies</span> also undertakes operation and maintenance (electronics) services for all
+                    <span className="text-[#4FB4DB]">Civic Technologies</span> also undertakes operation and maintenance electrical services for all
                     industrial verticals, ensuring long-term performance and reliability.
                 </p>
 

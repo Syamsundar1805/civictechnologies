@@ -66,7 +66,7 @@ const Clients: React.FC = () => {
 
                     <p className="text-gray-600 text-lg leading-relaxed max-w-2xl mx-auto">
                         Industry leaders who rely on our precision engineering,
-                        execution discipline, and turnkey electronics expertise.
+                        execution discipline, and electrical turnkey expertise.
                     </p>
                 </motion.div>
             </div>
