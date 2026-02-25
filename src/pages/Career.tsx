@@ -253,7 +253,7 @@ const Career: React.FC = () => {
                                     <div>
                                         <h3 className="font-bold text-gray-900 mb-1">HR Contact</h3>
                                         <p>
-                                            7893799699<br />
+                                            040-40213345<br />
                                             Mon - Sat, 9:00 AM - 6:00 PM
                                         </p>
                                     </div>

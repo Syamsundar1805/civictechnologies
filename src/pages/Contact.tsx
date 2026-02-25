@@ -213,7 +213,7 @@ const Contact: React.FC = () => {
                                 <div className="flex gap-5">
                                     <MapPin size={40} className="text-[#0177B2]" />
                                     <div>
-                                        <h3 className="font-bold text-gray-900 mb-1">Branch Office</h3>
+                                        <h3 className="font-bold text-gray-900 mb-1">Registered Office</h3>
                                         <p>
                                             <span className="font-bold text-[#0177B2]">CIVIC TECHNOLOGIES</span><br />
                                             Main Road, near JNTU Metro Station<br />
@@ -228,8 +228,6 @@ const Contact: React.FC = () => {
                                         <h3 className="font-bold text-gray-900 mb-1">Call Us</h3>
                                         <p>
                                             040-40213345<br />
-                                            7893799699<br />
-                                            9949699699
                                         </p>
                                     </div>
                                 </div>
@@ -240,17 +238,7 @@ const Contact: React.FC = () => {
                                         <h3 className="font-bold text-gray-900 mb-1">Send Us</h3>
                                         <p>
                                             <span className="font-bold text-[#0177B2]">info@civictechno.com</span><br />
-                                            vamsi@civictechno.com
-                                        </p>
-                                    </div>
-                                </div>
-
-                                <div className="flex gap-5">
-                                    <Building2 size={40} className="text-[#0177B2]" />
-                                    <div>
-                                        <h3 className="font-bold text-gray-900 mb-1">Registered Office</h3>
-                                        <p>
-                                            Begusarai, Bihar – 851112 India
+                                            
                                         </p>
                                     </div>
                                 </div>

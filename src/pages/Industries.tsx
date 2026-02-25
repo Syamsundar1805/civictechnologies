@@ -19,7 +19,7 @@ import clenImg from '../assets/industry_images/hospital_icu.webp';
 import NationalImg from '../assets/industry_images/hospital_icu2.webp';
 import NiabBiotechImg from '../assets/industry_images/pharma_cleanrooms_2.webp';
 import NddbFoodImg from '../assets/industry_images/food_beverages.webp';
-import MarutiSuzukiImg from '../assets/industry_images/industrial_img.webp';
+import MarutiSuzukiImg from '../assets/industry_images/Baterry.jpeg';
 import electroImg from '../assets/industry_images/HomeServe1.webp';
 import LodhaTowersImg from '../assets/industry_images/Commercial & High-Rise.webp';
 
@@ -96,45 +96,7 @@ const Industries: React.FC = () => {
                 "Fire Suppression Systems"
             ],
         },
-        {
-            icon: <FactoryIcon sx={{ fontSize: 85 }} />,
-            image: electroImg,
-            title: "Electronics & Industrial",
-            description: "Comprehensive electronics solutions for electronics and industrial manufacturing with emphasis on precision, reliability, and operational efficiency.",
-            requirements: [
-                "Clean Manufacturing Environments",
-                "ESD Protection Systems",
-                "Power Quality Management",
-                "Industrial Automation Support",
-                "Process-Specific Environmental"
-            ],
-        },
-        {
-            icon: <ApartmentIcon sx={{ fontSize: 85 }} />,
-            image: LodhaTowersImg,
-            title: "Commercial & High-Rise",
-            description: "Integrated electronics solutions for commercial and residential high-rise projects focusing on energy efficiency, comfort, and safety.",
-            requirements: [
-                "High-Rise Electrical Distribution",
-                "HVAC System Optimization",
-                "Building Management Systems",
-                "Fire Safety & Evacuation",
-                "Energy Efficiency Solutions"
-            ],
-        },
-        {
-            icon: <MemoryIcon sx={{ fontSize: 85 }} />,
-            image: IndustrialImg,
-            title: "Data Centers & IT Infrastructure",
-            description: "Critical infrastructure solutions for data centers and IT facilities with emphasis on reliability, redundancy, and precision environmental control.",
-            requirements: [
-                "Redundant Power Systems",
-                "Precision Cooling Solutions",
-                "Raised Floor Systems",
-                "Fire Detection & Suppression",
-                "Monitoring & Management"
-            ],
-        }
+
     ];
 
     return (
