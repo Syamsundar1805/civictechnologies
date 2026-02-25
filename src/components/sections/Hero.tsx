@@ -18,7 +18,7 @@ import KeyboardArrowDownIcon from '@mui/icons-material/KeyboardArrowDown';
 // Added image import for the About section
 import HeroBg from '../../assets/industry_images/AboutIMG.webp';
 import HomeBgImage from '../../assets/clintlogos/home_bg_img.webp';
-import LogoWatermark from '../../assets/clintlogos/hero_bg_watermark.svg';
+import LogoWatermark from '../../assets/clintlogos/hero_bg_watermark_2.svg';
 
 const Hero: React.FC = () => {
     const containerRef = useRef<HTMLElement>(null);
@@ -166,8 +166,8 @@ const Hero: React.FC = () => {
             <>
                 <section ref={inViewRef} className="relative min-h-screen flex items-center overflow-hidden pt-20">
                     <div className="absolute inset-0 z-0 opacity-100 pointer-events-none">
-                        <img src={HomeBgImage} alt="Background" className="w-full h-full object-cover" />
-                        <div className="absolute inset-0 bg-white mix-blend-multiply"></div>
+                        {/* <img src={HomeBgImage} alt="Background" className="w-full h-full object-cover" />
+                        <div className="absolute inset-0 bg-white mix-blend-multiply"></div> */}
 
                         {/* Watermark */}
                         <div className="absolute inset-0 flex justify-center items-center opacity-15">

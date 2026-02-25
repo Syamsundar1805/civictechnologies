@@ -38,7 +38,7 @@ const CTASection: React.FC = () => {
 
                     {/* Script Heading (Now Black) */}
                     <h2
-                        className="text-[40px] md:text-[65px] lg:text-[80px] text-black leading-none plaster-regular"
+                        className="text-[40px] md:text-[65px] lg:text-[80px] text-[#252525] leading-none plaster-regular"
                     >
                         Let’s Build
                     </h2>

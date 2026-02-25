@@ -14,7 +14,7 @@ const Clients: React.FC = () => {
     // eslint-disable-next-line @typescript-eslint/no-explicit-any
     const allLogos = Object.entries(logoModules).map(([path, mod]: any) => ({ path, src: mod.default }));
 
-    const specificClients = ['clint1.webp', 'clint4.webp', 'clint7.webp', 'clint10.webp', 'clint13.webp'];
+    const specificClients = ['clint1.webp', 'clint4.webp', 'clint5.webp', 'clint7.webp', 'clint10.webp', 'clint13.webp'];
 
     const row1Logos = allLogos.filter(logo => specificClients.some(c => logo.path.endsWith(c))).map(l => l.src);
     const row2Logos = allLogos.filter(logo => !specificClients.some(c => logo.path.endsWith(c))).map(l => l.src);
@@ -101,7 +101,7 @@ const Clients: React.FC = () => {
                 {/* Row 2 */}
                 <div className="w-full relative z-20 flex flex-col items-center mt-1">
                     <h3 className="text-gray-400 font-medium text-xs md:text-sm tracking-wide mb-6 inline-block opacity-70">
-                        Clients by ICLEAN
+                        In collaboration with iCLEAN
                     </h3>
                     <div className="marquee-container w-full overflow-hidden">
                         <div className="marquee-content marquee-scroll-left flex gap-20 w-max pr-20">
