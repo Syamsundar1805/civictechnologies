@@ -30,7 +30,7 @@ import ecs11111 from '../../assets/industry_images/ecl1.webp';
 import ecsecs from '../../assets/industry_images/ecl2.webp';
 import bms1 from '../../assets/industry_images/BMS!!.jpeg';
 import bms2 from '../../assets/industry_images/BMS22.jpeg';
-import fire1 from '../../assets/industry_images/FIREALARM2.jpeg';
+import fire1 from '../../assets/industry_images/FiREALARM2.jpeg';
 import fire2 from '../../assets/industry_images/Fire2.webp';
 import servilance1 from '../../assets/industry_images/sevilance1.webp';
 import servilance2 from '../../assets/industry_images/sevilance2.webp';
