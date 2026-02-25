@@ -4,7 +4,7 @@ import React from "react";
 interface ProjectCardProps {
   image: string;
   name: string;
-  description: string;
+  // description: string;
   projectType: string;
   location: string;
   category: string;
@@ -13,7 +13,7 @@ interface ProjectCardProps {
 const ProjectCard: React.FC<ProjectCardProps> = ({
   image,
   name,
-  description,
+  // description,
   projectType,
   location,
   category,
@@ -43,11 +43,6 @@ const ProjectCard: React.FC<ProjectCardProps> = ({
         >
           {name}
         </h3>
-
-        {/* 2. Description */}
-        <p className="text-gray-600 text-xs leading-relaxed mb-4 line-clamp-3">
-          {description}
-        </p>
 
         {/* 3. Client & Location */}
         <div className="border-t border-gray-100 pt-3 space-y-2 text-xs">

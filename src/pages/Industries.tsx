@@ -8,20 +8,14 @@ import LocalHospitalIcon from '@mui/icons-material/LocalHospital';
 import BiotechIcon from '@mui/icons-material/Biotech';
 import RestaurantIcon from '@mui/icons-material/Restaurant';
 import ElectricCarIcon from '@mui/icons-material/ElectricCar';
-import FactoryIcon from '@mui/icons-material/Factory';
-import ApartmentIcon from '@mui/icons-material/Apartment';
-import MemoryIcon from '@mui/icons-material/Memory';
 import CheckCircleOutlineIcon from '@mui/icons-material/CheckCircleOutline';
 import HeroBg from '../assets/clintlogos/hero_bg_img.webp';
 import DividerImg from '../assets/clintlogos/download.svg';
-import IndustrialImg from '../assets/industry_images/Data Centers.webp';
 import clenImg from '../assets/industry_images/hospital_icu.webp';
 import NationalImg from '../assets/industry_images/hospital_icu2.webp';
 import NiabBiotechImg from '../assets/industry_images/pharma_cleanrooms_2.webp';
 import NddbFoodImg from '../assets/industry_images/food_beverages.webp';
 import MarutiSuzukiImg from '../assets/industry_images/Baterry.jpeg';
-import electroImg from '../assets/industry_images/HomeServe1.webp';
-import LodhaTowersImg from '../assets/industry_images/Commercial & High-Rise.webp';
 
 const Industries: React.FC = () => {
 
@@ -51,10 +45,7 @@ const Industries: React.FC = () => {
             description: "Critical infrastructure solutions for healthcare facilities including operation theatres, ICU areas, and specialized medical equipment power systems.",
             requirements: [
                 "Operation Theatre Electronics Systems",
-                "Medical Gas Pipeline Systems",
-                "Critical Power Backup Solutions",
-                "Hospital Information Systems",
-                "Patient Safety Systems"
+                "Medical Gas Pipeline Systems"
             ],
         },
         {

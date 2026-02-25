@@ -376,7 +376,7 @@ const Career: React.FC = () => {
                                                         View
                                                     </Button>
                                                 )}
-                                                <Button variant="outlined" component="label" sx={{ borderRadius: "8px", textTransform: 'none', borderColor: '#0177B2', color: '#0177B2', '&:hover': { borderColor: '#a6824c', backgroundColor: 'transparent' } }}>
+                                                <Button variant="outlined" component="label" sx={{ borderRadius: "8px", textTransform: 'none', borderColor: '#0177B2', color: '#0177B2', '&:hover': { borderColor: '#0177B2', backgroundColor: 'rgba(1, 119, 178, 0.04)' } }}>
                                                     {formData.resumeName ? "Change" : "Choose File"}
                                                     <input type="file" hidden accept=".pdf,.doc,.docx" onChange={handleFileChange} />
                                                 </Button>

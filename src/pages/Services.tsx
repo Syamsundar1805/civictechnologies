@@ -6,25 +6,20 @@ import React from 'react';
 import ScrollToTopArrow from '../components/common/ScrollToTopArrow';
 import ParallaxBackground from '../components/common/ParallaxBackground';
 import ElectricalServicesIcon from '@mui/icons-material/ElectricalServices';
-import AcUnitIcon from '@mui/icons-material/AcUnit';
 import SettingsRemoteIcon from '@mui/icons-material/SettingsRemote';
 import LocalFireDepartmentIcon from '@mui/icons-material/LocalFireDepartment';
 import VideocamIcon from '@mui/icons-material/Videocam';
 import SettingsPhoneIcon from '@mui/icons-material/SettingsPhone';
-import VpnKeyIcon from '@mui/icons-material/VpnKey';
-import PrecisionManufacturingIcon from '@mui/icons-material/PrecisionManufacturing';
-import CheckCircleOutlineIcon from '@mui/icons-material/CheckCircleOutline';
+import VpnKeyIcon from '@mui/icons-material/VpnKey'; import CheckCircleOutlineIcon from '@mui/icons-material/CheckCircleOutline';
 import ArrowForwardIcon from '@mui/icons-material/ArrowForward'; // Added ArrowForwardIcon
 import HeroBg from '../assets/clintlogos/hero_bg_img.webp';
 import DividerImg from '../assets/clintlogos/download.svg';
 import IndustrialDemoBg from '../assets/industry_images/Sevilance.webp';
 import GvkBiosciencesImg from '../assets/industry_images/access_controle.webp';
-import NimsHospitalImg from '../assets/industry_images/fire_alaram.webp';
+import NimsHospitalImg from '../assets/industry_images/FIREALARM1.jpeg';
 import NiabBiotechImg from '../assets/industry_images/CabelSyatem.webp';
-import IndustrialImg from '../assets/industry_images/industrial_img.webp';
-import MarutiSuzukiImg from '../assets/clintlogos/baner_bg_image_1.webp';
-import IitGuwahatiImg from '../assets/industry_images/bms_system.webp';
-import LodhaTowersImg from '../assets/projects_images/Sarvotham Care Pvt.webp';
+import IitGuwahatiImg from '../assets/industry_images/BMSSERVICES.jpeg';
+import LodhaTowersImg from '../assets/industry_images/Electrical.jpeg';
 
 const Services: React.FC = () => {
     const { ref } = useInView({
@@ -48,20 +43,7 @@ const Services: React.FC = () => {
                 "Earthing & Lightning Protection"
             ],
         },
-        {
-            id: 'hvac-ventilation',
-            icon: <AcUnitIcon sx={{ fontSize: 85 }} />,
-            image: MarutiSuzukiImg,
-            title: "HVAC & Ventilation",
-            description: "Design and installation of advanced climate control systems tailored for industrial, commercial, and cleanroom environments with a focus on energy optimization.",
-            requirements: [
-                "Central Air Conditioning",
-                "Ventilation & Exhaust Systems",
-                "DX & VRF Units",
-                "Ducting & Insulation",
-                "Annual Maintenance Contracts"
-            ],
-        },
+
         {
             id: 'bms-automation',
             icon: <SettingsRemoteIcon sx={{ fontSize: 85 }} />,
@@ -84,10 +66,8 @@ const Services: React.FC = () => {
             description: "End-to-end fire protection solutions including detection, suppression, and hydrant systems designed to meet the strictest safety codes and NBC norms.",
             requirements: [
                 "Fire Detection Systems",
-                "Hydrant & Sprinkler Systems",
                 "Gas Suppression Systems",
                 "Public Address Systems",
-                "Safety Audits & Compliance"
             ],
         },
         {
@@ -132,20 +112,7 @@ const Services: React.FC = () => {
                 "Integration with BMS"
             ],
         },
-        {
-            id: 'industrial-high-side',
-            icon: <PrecisionManufacturingIcon sx={{ fontSize: 85 }} />,
-            image: IndustrialImg,
-            title: "Industrial & High-Side",
-            description: "Specialized high-side engineering for heavy industries, including chiller plants, cooling towers, and process-specific mechanical systems.",
-            requirements: [
-                "Chiller Plants (Air/Water)",
-                "Cooling Towers & AHUs",
-                "Pumping Stations",
-                "Industrial Ventilation",
-                "Process Piping Systems"
-            ],
-        }
+
     ];
 
     return (

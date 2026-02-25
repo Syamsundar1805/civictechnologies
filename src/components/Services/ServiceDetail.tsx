@@ -22,19 +22,15 @@ import DesignServicesIcon from "@mui/icons-material/DesignServices";
 import DividerImg from '../../assets/clintlogos/download.svg';
 import IndustrialDemoBg from '../../assets/industry_images/Sevilance.webp';
 import GvkBiosciencesImg from '../../assets/industry_images/access_controle.webp';
-import NimsHospitalImg from '../../assets/industry_images/fire_alaram.webp';
+import NimsHospitalImg from '../../assets/industry_images/FIREALARM1.jpeg';
 import NiabBiotechImg from '../../assets/industry_images/CabelSyatem.webp';
-import NddbFoodImg from '../../assets/industry_images/industrial_img.webp';
-import MarutiSuzukiImg from '../../assets/clintlogos/baner_bg_image_1.webp';
-import IitGuwahatiImg from '../../assets/industry_images/bms_system.webp';
-import LodhaTowersImg from '../../assets/projects_images/Sarvotham Care Pvt.webp';
+import IitGuwahatiImg from '../../assets/industry_images/BMSSERVICES.jpeg';
+import LodhaTowersImg from '../../assets/industry_images/Electrical.jpeg';
 import ecs11111 from '../../assets/industry_images/ecl1.webp';
 import ecsecs from '../../assets/industry_images/ecl2.webp';
-import hvac from '../../assets/industry_images/Havc.webp';
-import hvac2 from '../../assets/industry_images/Havc2.webp';
-import bms1 from '../../assets/industry_images/bms1.webp';
-import bms2 from '../../assets/industry_images/bms2.webp';
-import fire1 from '../../assets/industry_images/Fire1.webp';
+import bms1 from '../../assets/industry_images/BMS!!.jpeg';
+import bms2 from '../../assets/industry_images/BMS22.jpeg';
+import fire1 from '../../assets/industry_images/FIREALARM2.jpeg';
 import fire2 from '../../assets/industry_images/Fire2.webp';
 import servilance1 from '../../assets/industry_images/sevilance1.webp';
 import servilance2 from '../../assets/industry_images/sevilance2.webp';
@@ -42,8 +38,6 @@ import cabel1 from '../../assets/industry_images/cabel1.webp';
 import cabel2 from '../../assets/industry_images/cabel2.webp';
 import access1 from '../../assets/industry_images/Access1.webp';
 import access2 from '../../assets/industry_images/Access2.webp';
-import industry1 from '../../assets/industry_images/Industrial1.webp';
-import industry2 from '../../assets/industry_images/industrial2.webp';
 
 interface Service {
   id: string;
@@ -76,23 +70,6 @@ const services: Service[] = [
     ],
   },
   {
-    id: 'hvac-ventilation',
-    icon: <AcUnitIcon className="text-5xl text-[#0177B2]" />,
-    title: "HVAC & Ventilation",
-    heroImage: MarutiSuzukiImg,
-    solutionImage: hvac, // Unique image
-    approachImage: hvac2, // Unique image
-    description: "Design and installation of advanced climate control systems tailored for industrial, commercial, and cleanroom environments with a focus on energy optimization.",
-    detailedInfo: "Our HVAC services ensure optimal indoor air quality and thermal comfort. We specialize in the design, installation, and maintenance of heating, ventilation, and air conditioning systems. Whether it's a commercial complex or an industrial facility, we provide energy-efficient solutions tailored to your specific environmental needs.",
-    features: [
-      "Central Air Conditioning",
-      "Ventilation & Exhaust Systems",
-      "DX & VRF Units",
-      "Ducting & Insulation",
-      "Annual Maintenance Contracts",
-    ],
-  },
-  {
     id: 'bms-automation',
     icon: <SettingsRemoteIcon className="text-5xl text-[#0177B2]" />,
     title: "BMS & Automation",
@@ -120,10 +97,8 @@ const services: Service[] = [
     detailedInfo: "Safety is paramount. We design and install comprehensive fire fighting and detection systems that comply with strict safety regulations. From fire alarms to sprinkler systems and hydrants, we ensure your premises are equipped to handle emergencies effectively.",
     features: [
       "Fire Detection Systems",
-      "Hydrant & Sprinkler Systems",
       "Gas Suppression Systems",
       "Public Address Systems",
-      "Safety Audits & Compliance",
     ],
   },
   {
@@ -177,23 +152,7 @@ const services: Service[] = [
       "Integration with BMS",
     ],
   },
-  {
-    id: 'industrial-high-side',
-    icon: <PrecisionManufacturingIcon className="text-5xl text-[#0177B2]" />,
-    title: "Industrial & High-Side",
-    heroImage: NddbFoodImg,
-    solutionImage: industry1, // Unique image
-    approachImage: industry2, // Unique image
-    description: "Specialized high-side engineering for heavy industries, including chiller plants, cooling towers, and process-specific mechanical systems.",
-    detailedInfo: "We deliver specialized high-side engineering solutions for heavy industries. Our expertise includes the installation and maintenance of large-scale chiller plants, cooling towers, and process piping systems essential for industrial operations.",
-    features: [
-      "Chiller Plants (Air/Water)",
-      "Cooling Towers & AHUs",
-      "Pumping Stations",
-      "Industrial Ventilation",
-      "Process Piping Systems",
-    ],
-  },
+
 ];
 
 // Static Services Offered List

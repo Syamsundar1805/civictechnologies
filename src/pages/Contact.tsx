@@ -187,7 +187,7 @@ const Contact: React.FC = () => {
             </section>
 
             {/* INFO + FORM */}
-            <section id="general-inquiry" ref={ref} className="py-20 lg:py-40 bg-white">
+            <section id="general-inquiry" ref={ref} className="pt-20 pb-0 lg:pt-40 lg:pb-0 bg-white">
                 <div className="container mx-auto px-4 lg:px-12">
 
                     <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-stretch">

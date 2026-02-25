@@ -134,7 +134,7 @@ const About: React.FC = () => {
                         </div>
 
                         <p className="text-lg text-gray-600 leading-relaxed mb-8">
-                            Established in <span className="font-bold text-[#0177B2]">2010</span>, <span className="text-[#4FB4DB]">Civic Technologies</span> began as a specialized electrical turnkey solution provider for cleanroom environments. Over time, the organization expanded into a full-scale electrical turnkey engineering partner serving pharmaceuticals, healthcare, industrial manufacturing, semi-conductors, lithium battery manufacturing, commercial complexes, research facilities, and infrastructure projects.
+                            Established in 2010, <span className="text-[#4FB4DB]">Civic Technologies</span> began as a specialized electrical turnkey solution provider for cleanroom environments. Over time, the organization expanded into a full-scale electrical turnkey engineering partner serving pharmaceuticals, healthcare, industrial manufacturing, semi-conductors, lithium battery manufacturing, commercial complexes, research facilities, and infrastructure projects.
                         </p>
                         <p className="text-lg text-gray-600 leading-relaxed">
                             Today, we stand as a trusted engineering partner delivering electrical turnkey excellence with accountability, technical depth, and corporate integrity.
@@ -188,7 +188,7 @@ const About: React.FC = () => {
                                     {/* Content Card */}
                                     <div className={`w-full md:w-1/2 ${index % 2 === 0 ? 'md:text-right md:pr-12' : 'md:pl-12'}`}>
                                         <motion.div
-                                            className="bg-white p-8 rounded-2xl shadow-lg border border-gray-100 hover:shadow-xl transition-shadow duration-300 group"
+                                            className="bg-blue-50 p-8 rounded-2xl shadow-lg border border-blue-100 hover:shadow-xl transition-shadow duration-300 group"
                                             whileHover={{ y: -5 }}
                                         >
                                             <span className="inline-block px-3 py-1 bg-[#0177B2]/50 text-black rounded-full text-sm font-bold mb-4 group-hover:bg-[#015D8A] transition-colors">

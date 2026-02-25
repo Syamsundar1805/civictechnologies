@@ -4,10 +4,10 @@ import { useNavigate } from "react-router-dom";
 import KeyboardArrowLeftIcon from '@mui/icons-material/KeyboardArrowLeft';
 import KeyboardArrowRightIcon from '@mui/icons-material/KeyboardArrowRight';
 
-import service4 from '../../assets/industry_images/Home service4.webp';
-import service3 from '../../assets/industry_images/HomeServe1.webp';
+import service4 from '../../assets/industry_images/BMSSERVICES.jpeg';
+import service3 from '../../assets/industry_images/electricservice.jpeg';
 import service2 from '../../assets/industry_images/HomeService2.webp';
-import service1 from '../../assets/projects_images/Sarvotham Care Pvt.webp';
+import service1 from '../../assets/industry_images/EMS.jpeg';
 
 const services = [
   {
@@ -17,7 +17,7 @@ const services = [
     image: service3,
   },
   {
-    title: "HVAC & High-Side Engineering",
+    title: "HVAC Electrical",
     description:
       "Clean Rooms, Chillers, AHU Systems, Ventilation & Humidification Systems.",
     image: service2,
@@ -74,7 +74,6 @@ const ServicesSection = () => {
     >
 
       {/* Background Glow */}
-      <div className="absolute top-0 right-0 w-96 h-96 bg-[#0177B2]/10 rounded-full blur-3xl opacity-40 translate-x-1/2 -translate-y-1/2 pointer-events-none z-0"></div>
       <div className="absolute bottom-0 left-0 w-96 h-96 bg-[#0177B2]/10 rounded-full blur-3xl opacity-40 -translate-x-1/2 translate-y-1/2 pointer-events-none z-0"></div>
 
       {/* Header */}

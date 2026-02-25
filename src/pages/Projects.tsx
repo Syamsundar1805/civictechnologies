@@ -164,7 +164,6 @@ const Projects: React.FC = () => {
                   key={project.id}
                   image={project.image}
                   name={project.name}
-                  description={project.description}
                   projectType={project.projectType}
                   location={project.location}
                   category={project.category}

@@ -6,12 +6,12 @@ import { useInView } from 'react-intersection-observer';
 import { useNavigate } from 'react-router-dom';
 
 // Images
-import MarutiImg from '../../assets/industry_images/Data Centers.webp';
-import NDDBImg from '../../assets/projects_images/GVK Biosciences Pvt.webp';
-import IITImg from '../../assets/projects_images/Andhra Pradesh Health & Medical Dept.webp';
-import NIABImg from '../../assets/projects_images/IIT Guwahati.webp';
+import MarutiImg from '../../assets/industry_images/Baterry.jpeg';
+import NDDBImg from '../../assets/projects_images/National Dairy Development Board (NDDB).webp';
+import IITImg from '../../assets/industry_images/pharma_cleanrooms_2.webp';
+import NIABImg from '../../assets/projects_images/National Institute of Animal Biotechnology.webp';
 import ColgateImg from '../../assets/projects_images/Colgate Palmolive.webp';
-import LancoImg from '../../assets/projects_images/Lanco Hills.webp';
+import LancoImg from '../../assets/projects_images/Tata Semiconductor Assembly.jpg';
 
 
 const ProjectsShowcase: React.FC = () => {
@@ -165,7 +165,7 @@ const ProjectsShowcase: React.FC = () => {
                                     {/* Inactive State - Horizontal Title (Mobile Only) */}
                                     {!isActive && (
                                         <div className="flex lg:hidden w-full h-full items-center justify-start">
-                                            <h3 className="text-white font-bold text-lg max-w-[90%] line-clamp-1 shadow-black drop-shadow-lg transition-opacity duration-300">
+                                            <h3 className="text-white font-bold text-base max-w-[90%] line-clamp-1 shadow-black drop-shadow-lg transition-opacity duration-300">
                                                 {project.name}
                                             </h3>
                                         </div>
@@ -179,7 +179,7 @@ const ProjectsShowcase: React.FC = () => {
                                             transition={{ duration: 0.5, delay: 0.3 }}
                                             className="relative z-10 w-full"
                                         >
-                                            <h3 className="text-xl sm:text-3xl md:text-5xl font-black mb-4 font-primary uppercase tracking-tight text-white leading-tight">
+                                            <h3 className="text-lg sm:text-xl md:text-4xl font-black mb-4 font-primary uppercase tracking-tight text-white leading-tight">
                                                 {project.name}
                                             </h3>
 
