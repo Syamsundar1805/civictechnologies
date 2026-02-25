@@ -96,7 +96,7 @@ const ServicesSection = () => {
               Our
             </h2>
 
-            <h1 className="font-primary font-black tracking-[0.08em] uppercase text-[#111111] text-[24px] md:text-[36px] lg:text-[42px] leading-none mt-2">
+            <h1 className="font-primary font-black tracking-[0.08em] uppercase text-[#252525] text-[24px] md:text-[36px] lg:text-[42px] leading-none mt-2">
               Services
             </h1>
 

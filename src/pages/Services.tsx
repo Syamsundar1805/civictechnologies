@@ -209,7 +209,7 @@ const Services: React.FC = () => {
                                 Technical
                             </h2>
 
-                            <h1 className="font-primary mb-[30px] font-black tracking-[0.08em] uppercase text-[#111111] text-[28px] md:text-[40px] lg:text-[47px] leading-none mt-2">
+                            <h1 className="font-primary mb-[30px] font-black tracking-[0.08em] uppercase text-[#252525] text-[28px] md:text-[40px] lg:text-[47px] leading-none mt-2">
                                 Excellence
                             </h1>
                         </div>
@@ -260,7 +260,7 @@ const Services: React.FC = () => {
                                             >
                                                 {service.title.split('&')[0]}
                                             </h2>
-                                            <h1 className="font-primary font-black tracking-[0.08em] uppercase text-[#111111] text-[28px] md:text-[36px] leading-none mt-2">
+                                            <h1 className="font-primary font-black tracking-[0.08em] uppercase text-[#252525] text-[28px] md:text-[36px] leading-none mt-2">
                                                 {service.title.split('&')[1] || ''}
                                             </h1>
                                         </motion.div>

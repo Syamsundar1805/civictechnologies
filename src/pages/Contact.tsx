@@ -203,7 +203,7 @@ const Contact: React.FC = () => {
                                 <h2 className="text-[40px] md:text-[50px] lg:text-[65px] text-[#0177B2] leading-none plaster-regular">
                                     Get In
                                 </h2>
-                                <h1 className="font-primary font-black uppercase text-[#111111] text-[28px] md:text-[35px] lg:text-[45px] leading-none mt-2">
+                                <h1 className="font-primary font-black uppercase text-[#252525] text-[28px] md:text-[35px] lg:text-[45px] leading-none mt-2">
                                     Touch With Us
                                 </h1>
                             </div>
@@ -215,7 +215,7 @@ const Contact: React.FC = () => {
                                     <div>
                                         <h3 className="font-bold text-gray-900 mb-1">Registered Office</h3>
                                         <p>
-                                            <span className="font-bold text-[#0177B2]">CIVIC TECHNOLOGIES</span><br />
+                                            <span className="font-bold text-[#4FB4DB]">CIVIC TECHNOLOGIES</span><br />
                                             Main Road, near JNTU Metro Station<br />
                                             Kukatpally, Hyderabad, Telangana, India
                                         </p>
@@ -238,7 +238,7 @@ const Contact: React.FC = () => {
                                         <h3 className="font-bold text-gray-900 mb-1">Send Us</h3>
                                         <p>
                                             <span className="font-bold text-[#0177B2]">info@civictechno.com</span><br />
-                                            
+
                                         </p>
                                     </div>
                                 </div>
@@ -257,7 +257,7 @@ const Contact: React.FC = () => {
                                 <h2 className="text-[40px] md:text-[50px] lg:text-[65px] text-[#0177B2] leading-none plaster-regular">
                                     General
                                 </h2>
-                                <h1 className="font-primary font-black uppercase text-[#111111] text-[28px] md:text-[35px] lg:text-[45px] leading-none mt-2">
+                                <h1 className="font-primary font-black uppercase text-[#252525] text-[28px] md:text-[35px] lg:text-[45px] leading-none mt-2">
                                     Inquiry
                                 </h1>
                             </div>

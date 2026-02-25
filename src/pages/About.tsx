@@ -37,7 +37,7 @@ const About: React.FC = () => {
         {
             year: "2010",
             title: "Foundation & Specialization",
-            description: "Civic Technologies began as a specialized turnkey electrical solution provider for cleanroom environments, setting the stage for engineering excellence."
+            description: <><span className="text-[#4FB4DB]">Civic Technologies</span> began as a specialized turnkey electrical solution provider for cleanroom environments, setting the stage for engineering excellence.</>
         },
         {
             year: "2012-2015",
@@ -83,7 +83,7 @@ const About: React.FC = () => {
                                 About
                             </h2>
                             <h1 className="font-primary font-black tracking-[0.08em] uppercase text-white text-[28px] md:text-[47px] lg:text-[65px] leading-none mt-2">
-                                Civic Techno
+                                Civic Technologies
                             </h1>
                         </div>
                         <p className="text-xl md:text-2xl text-blue-100 mt-6 max-w-2xl">
@@ -128,13 +128,13 @@ const About: React.FC = () => {
                                 Our
                             </h2>
 
-                            <h1 className="font-primary font-black tracking-[0.08em] uppercase text-[#111111] text-[28px] md:text-[40px] lg:text-[47px] leading-none mt-2 mb-6">
+                            <h1 className="font-primary font-black tracking-[0.08em] uppercase text-[#252525] text-[28px] md:text-[40px] lg:text-[47px] leading-none mt-2 mb-6">
                                 Story
                             </h1>
                         </div>
 
                         <p className="text-lg text-gray-600 leading-relaxed mb-8">
-                            Established in <span className="font-bold text-[#0177B2]">2010</span>, Civic Technologies began as a specialized turnkey electrical solution provider for cleanroom environments. Over time, the organization expanded into a full-scale electronics turnkey engineering partner serving pharmaceuticals, healthcare, industrial manufacturing, commercial complexes, research facilities, and infrastructure projects.
+                            Established in <span className="font-bold text-[#0177B2]">2010</span>, <span className="text-[#4FB4DB]">Civic Technologies</span> began as a specialized turnkey electrical solution provider for cleanroom environments. Over time, the organization expanded into a full-scale electronics turnkey engineering partner serving pharmaceuticals, healthcare, industrial manufacturing, commercial complexes, research facilities, and infrastructure projects.
                         </p>
                         <p className="text-lg text-gray-600 leading-relaxed">
                             Today, we stand as a trusted engineering partner delivering turnkey electronics excellence with accountability, technical depth, and corporate integrity.
@@ -163,7 +163,7 @@ const About: React.FC = () => {
                                 Our
                             </h2>
 
-                            <h1 className="font-primary font-black tracking-[0.08em] uppercase text-[#111111] text-[28px] md:text-[40px] lg:text-[47px] leading-none mt-2 mb-6">
+                            <h1 className="font-primary font-black tracking-[0.08em] uppercase text-[#252525] text-[28px] md:text-[40px] lg:text-[47px] leading-none mt-2 mb-6">
                                 History
                             </h1>
                         </div>
@@ -233,19 +233,19 @@ const About: React.FC = () => {
                     Our
                 </h2>
 
-                <h1 className="font-primary font-black tracking-[0.08em] uppercase text-[#111111] text-[28px] md:text-[40px] lg:text-[47px] leading-none mt-2 mb-6">
+                <h1 className="font-primary font-black tracking-[0.08em] uppercase text-[#252525] text-[28px] md:text-[40px] lg:text-[47px] leading-none mt-2 mb-6">
                     Profile
                 </h1>
 
                 <p className="text-gray-600 leading-relaxed text-lg">
-                    Civic Techno has built for itself an enviable reputation of being a one-stop turnkey provider
+                    <span className="text-[#4FB4DB]">Civic Technologies</span> has built for itself an enviable reputation of being a one-stop turnkey provider
                     for all industrial verticals. Its potent blend of technical and talented workforce, design
                     expertise, exceptional project execution capabilities and global footprint makes it the most
                     preferred choice for electronics projects.
                 </p>
 
                 <p className="text-gray-600 leading-relaxed text-lg mt-6">
-                    Civic Technologies also undertakes operation and maintenance (electronics) services for all
+                    <span className="text-[#4FB4DB]">Civic Technologies</span> also undertakes operation and maintenance (electronics) services for all
                     industrial verticals, ensuring long-term performance and reliability.
                 </p>
 
@@ -266,7 +266,7 @@ const About: React.FC = () => {
                     Our
                 </h2>
 
-                <h1 className="font-primary font-black tracking-[0.08em] uppercase text-[#111111] text-[28px] md:text-[40px] lg:text-[47px] leading-none mt-2 mb-6">
+                <h1 className="font-primary font-black tracking-[0.08em] uppercase text-[#252525] text-[28px] md:text-[40px] lg:text-[47px] leading-none mt-2 mb-6">
                     Team
                 </h1>
 
@@ -311,7 +311,7 @@ const About: React.FC = () => {
                             Epitome of
                         </h2>
 
-                        <h1 className="font-primary font-black tracking-[0.08em] uppercase text-[#111111] text-[28px] md:text-[40px] lg:text-[47px] leading-none mt-2 mb-6">
+                        <h1 className="font-primary font-black tracking-[0.08em] uppercase text-[#252525] text-[28px] md:text-[40px] lg:text-[47px] leading-none mt-2 mb-6">
                             SUCCESS
                         </h1>
                     </motion.div>
@@ -361,7 +361,7 @@ const About: React.FC = () => {
                                         Our
                                     </h2>
 
-                                    <h1 className="font-primary font-black tracking-[0.08em] uppercase text-[#111111] text-[28px] md:text-[40px] lg:text-[47px] leading-none mt-2 mb-6">
+                                    <h1 className="font-primary font-black tracking-[0.08em] uppercase text-[#252525] text-[28px] md:text-[40px] lg:text-[47px] leading-none mt-2 mb-6">
                                         Vision
                                     </h1>
                                 </motion.div>
@@ -386,7 +386,7 @@ const About: React.FC = () => {
                                         Our
                                     </h2>
 
-                                    <h1 className="font-primary font-black tracking-[0.08em] uppercase text-[#111111] text-[28px] md:text-[40px] lg:text-[47px] leading-none mt-2 mb-6">
+                                    <h1 className="font-primary font-black tracking-[0.08em] uppercase text-[#252525] text-[28px] md:text-[40px] lg:text-[47px] leading-none mt-2 mb-6">
                                         mission
                                     </h1>
                                 </motion.div>
@@ -412,7 +412,7 @@ const About: React.FC = () => {
                                 Our
                             </h2>
 
-                            <h1 className="font-primary font-black tracking-[0.08em] uppercase text-[#111111] text-[28px] md:text-[40px] lg:text-[47px] leading-none mt-2 mb-6">
+                            <h1 className="font-primary font-black tracking-[0.08em] uppercase text-[#252525] text-[28px] md:text-[40px] lg:text-[47px] leading-none mt-2 mb-6">
                                 Quality
                             </h1>
 

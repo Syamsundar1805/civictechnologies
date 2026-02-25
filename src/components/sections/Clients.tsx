@@ -10,14 +10,17 @@ const Clients: React.FC = () => {
 
     // Load logos
     const logoModules = import.meta.glob('../../assets/clintlogos/clint*.webp', { eager: true });
+
     // eslint-disable-next-line @typescript-eslint/no-explicit-any
-    const clientLogos = Object.values(logoModules).map((mod: any) => mod.default);
+    const allLogos = Object.entries(logoModules).map(([path, mod]: any) => ({ path, src: mod.default }));
 
-    const midPoint = Math.ceil(clientLogos.length / 2);
-    const row1Logos = clientLogos.slice(0, midPoint);
-    const row2Logos = clientLogos.slice(midPoint);
+    const specificClients = ['clint1.webp', 'clint4.webp', 'clint7.webp', 'clint10.webp', 'clint13.webp'];
 
-    const marqueeRow1 = [...row1Logos, ...row1Logos, ...row1Logos, ...row1Logos];
+    const row1Logos = allLogos.filter(logo => specificClients.some(c => logo.path.endsWith(c))).map(l => l.src);
+    const row2Logos = allLogos.filter(logo => !specificClients.some(c => logo.path.endsWith(c))).map(l => l.src);
+
+    // Give row1 more copies because it has fewer logos, to ensure continuous scrolling
+    const marqueeRow1 = [...row1Logos, ...row1Logos, ...row1Logos, ...row1Logos, ...row1Logos, ...row1Logos];
     const marqueeRow2 = [...row2Logos, ...row2Logos, ...row2Logos, ...row2Logos];
 
     return (
@@ -57,7 +60,7 @@ const Clients: React.FC = () => {
                         Our
                     </h2>
 
-                    <h1 className="font-primary font-black tracking-[0.08em] uppercase text-[#111111] text-[28px] md:text-[40px] lg:text-[47px] leading-none mt-2 mb-6">
+                    <h1 className="font-primary font-black tracking-[0.08em] uppercase text-[#252525] text-[28px] md:text-[40px] lg:text-[47px] leading-none mt-2 mb-6">
                         Trusted Clients
                     </h1>
 
@@ -76,38 +79,45 @@ const Clients: React.FC = () => {
                 <div className="absolute right-0 top-0 bottom-0 w-20 bg-gradient-to-l from-white to-transparent z-10 pointer-events-none"></div>
 
                 {/* Row 1 */}
-                <div className="marquee-container w-full overflow-hidden">
-                    <div className="marquee-content marquee-scroll-right flex gap-20 w-max pl-20">
-                        {marqueeRow1.map((logo, index) => (
-                            <div
-                                key={`row1-${index}`}
-                                className="flex-shrink-0 w-32 md:w-40 h-20 flex items-center justify-center transition-transform duration-300 hover:scale-110"
-                            >
-                                <img
-                                    src={logo}
-                                    alt={`Client Logo ${index}`}
-                                    className="max-h-full object-contain"
-                                />
-                            </div>
-                        ))}
+                <div className="w-full relative z-20 flex flex-col items-center mb-1">
+                    <div className="marquee-container w-full overflow-hidden">
+                        <div className="marquee-content marquee-scroll-right flex gap-20 w-max pl-20">
+                            {marqueeRow1.map((logo, index) => (
+                                <div
+                                    key={`row1-${index}`}
+                                    className="flex-shrink-0 w-32 md:w-40 h-20 flex items-center justify-center transition-transform duration-300 hover:scale-110"
+                                >
+                                    <img
+                                        src={logo}
+                                        alt={`Client Logo ${index}`}
+                                        className="max-h-full object-contain"
+                                    />
+                                </div>
+                            ))}
+                        </div>
                     </div>
                 </div>
 
                 {/* Row 2 */}
-                <div className="marquee-container w-full overflow-hidden">
-                    <div className="marquee-content marquee-scroll-left flex gap-20 w-max pr-20">
-                        {marqueeRow2.map((logo, index) => (
-                            <div
-                                key={`row2-${index}`}
-                                className="flex-shrink-0 w-32 md:w-40 h-20 flex items-center justify-center transition-transform duration-300 hover:scale-110"
-                            >
-                                <img
-                                    src={logo}
-                                    alt={`Client Logo ${index}`}
-                                    className="max-h-full object-contain"
-                                />
-                            </div>
-                        ))}
+                <div className="w-full relative z-20 flex flex-col items-center mt-1">
+                    <h3 className="text-gray-400 font-medium text-xs md:text-sm tracking-wide mb-6 inline-block opacity-70">
+                        Clients by ICLEAN
+                    </h3>
+                    <div className="marquee-container w-full overflow-hidden">
+                        <div className="marquee-content marquee-scroll-left flex gap-20 w-max pr-20">
+                            {marqueeRow2.map((logo, index) => (
+                                <div
+                                    key={`row2-${index}`}
+                                    className="flex-shrink-0 w-32 md:w-40 h-20 flex items-center justify-center transition-transform duration-300 hover:scale-110"
+                                >
+                                    <img
+                                        src={logo}
+                                        alt={`Client Logo ${index}`}
+                                        className="max-h-full object-contain"
+                                    />
+                                </div>
+                            ))}
+                        </div>
                     </div>
                 </div>
 

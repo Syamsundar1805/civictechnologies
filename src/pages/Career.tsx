@@ -219,7 +219,7 @@ const Career: React.FC = () => {
                                 <h2 className="text-[40px] md:text-[50px] lg:text-[65px] text-[#0177B2] leading-none plaster-regular">
                                     Apply
                                 </h2>
-                                <h1 className="font-primary font-black uppercase text-[#111111] text-[28px] md:text-[35px] lg:text-[45px] leading-none mt-2">
+                                <h1 className="font-primary font-black uppercase text-[#252525] text-[28px] md:text-[35px] lg:text-[45px] leading-none mt-2">
                                     Now
                                 </h1>
                             </div>
@@ -284,7 +284,7 @@ const Career: React.FC = () => {
                                 <h2 className="text-[40px] md:text-[50px] lg:text-[65px] text-[#0177B2] leading-none plaster-regular">
                                     Career
                                 </h2>
-                                <h1 className="font-primary font-black uppercase text-[#111111] text-[28px] md:text-[35px] lg:text-[45px] leading-none mt-2">
+                                <h1 className="font-primary font-black uppercase text-[#252525] text-[28px] md:text-[35px] lg:text-[45px] leading-none mt-2">
                                     Application
                                 </h1>
                             </div>

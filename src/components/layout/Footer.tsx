@@ -194,7 +194,7 @@ const Footer: React.FC = () => {
                         <span className="hidden md:inline text-gray-500">|</span>
 
                         <p className="text-gray-400 text-sm">
-                            © {currentYear} Civic Technologies. All Rights Reserved.
+                            © {currentYear} <span className="text-[#4FB4DB]">Civic Technologies</span>. All Rights Reserved.
                         </p>
                     </motion.div>
 

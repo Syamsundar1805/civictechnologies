@@ -92,7 +92,7 @@ const Projects: React.FC = () => {
             Our
           </h2>
 
-          <h1 className="font-primary mb-6 font-black uppercase text-[#111111] text-[28px] md:text-[40px] lg:text-[47px] leading-none mt-2">
+          <h1 className="font-primary mb-6 font-black uppercase text-[#252525] text-[28px] md:text-[40px] lg:text-[47px] leading-none mt-2">
             Portfolio
           </h1>
 

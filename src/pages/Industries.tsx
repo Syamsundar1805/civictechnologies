@@ -160,13 +160,13 @@ const Industries: React.FC = () => {
                                 Our
                             </h2>
 
-                            <h1 className="font-primary mb-[30px] font-black tracking-[0.08em] uppercase text-[#111111] text-[28px] md:text-[40px] lg:text-[47px] leading-none mt-2">
+                            <h1 className="font-primary mb-[30px] font-black tracking-[0.08em] uppercase text-[#252525] text-[28px] md:text-[40px] lg:text-[47px] leading-none mt-2">
                                 Expertise
                             </h1>
                         </div>
 
                         <p className="text-lg text-gray-600 leading-relaxed">
-                            Civic Technologies delivers tailored engineering infrastructure solutions across diverse sectors with regulatory precision and execution excellence.
+                            <span className="text-[#4FB4DB]">Civic Technologies</span> delivers tailored engineering infrastructure solutions across diverse sectors with regulatory precision and execution excellence.
                         </p>
                     </motion.div>
                 </div>

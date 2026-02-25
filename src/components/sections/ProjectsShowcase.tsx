@@ -10,6 +10,8 @@ import MarutiImg from '../../assets/industry_images/Data Centers.webp';
 import NDDBImg from '../../assets/projects_images/GVK Biosciences Pvt.webp';
 import IITImg from '../../assets/projects_images/Andhra Pradesh Health & Medical Dept.webp';
 import NIABImg from '../../assets/projects_images/IIT Guwahati.webp';
+import ColgateImg from '../../assets/projects_images/Colgate Palmolive.webp';
+import LancoImg from '../../assets/projects_images/Lanco Hills.webp';
 
 
 const ProjectsShowcase: React.FC = () => {
@@ -45,6 +47,18 @@ const ProjectsShowcase: React.FC = () => {
             client: "NIAB",
             location: "Hyderabad",
             image: NIABImg
+        },
+        {
+            name: "Colgate Palmolive Process Plant",
+            client: "Colgate Palmolive",
+            location: "Sri City",
+            image: ColgateImg
+        },
+        {
+            name: "Lanco Hills Signature Tower",
+            client: "Lanco Hills",
+            location: "Hyderabad",
+            image: LancoImg
         }
     ];
 
@@ -81,7 +95,7 @@ const ProjectsShowcase: React.FC = () => {
                             Our
                         </h2>
 
-                        <h1 className="font-primary font-black tracking-[0.08em] uppercase text-[#111111] text-[24px] md:text-[36px] lg:text-[42px] leading-none mt-2">
+                        <h1 className="font-primary font-black tracking-[0.08em] uppercase text-[#252525] text-[24px] md:text-[36px] lg:text-[42px] leading-none mt-2">
                             Featured Projects
                         </h1>
 
