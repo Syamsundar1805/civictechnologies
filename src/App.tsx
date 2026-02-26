@@ -12,6 +12,7 @@ import Contact from './pages/Contact';
 import Career from './pages/Career';
 import { motion } from 'framer-motion';
 import ScrollToTop from './components/common/ScrollToTop';
+import { Analytics } from '@vercel/analytics/react';
 
 function App() {
   return (
@@ -36,6 +37,7 @@ function App() {
           </Routes>
         </motion.div>
         <Footer />
+        <Analytics />
       </div>
     </Router>
   );
