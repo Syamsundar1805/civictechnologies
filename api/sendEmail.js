@@ -22,11 +22,11 @@ export default async function handler(req, res) {
       {
         sender: {
           name: "Website Contact",
-          email: "pradeepvarmaalluri7@gmail.com"
+          email: process.env.EMAIL_ADDRESS
         },
         to: [
           {
-            email: "pradeepvarmaalluri1@gmail.com"
+            email: process.env.EMAIL_ADDRESS
           }
         ],
         replyTo: {
@@ -208,7 +208,7 @@ export default async function handler(req, res) {
                 font-size:14px;
                 color:#aaaaaa;
               ">
-                Industrial Infrastructure & Turnkey MEP Solutions
+                Industrial Infrastructure & Electrical Turnkey Solutions
               </div>
             </td>
           </tr>
