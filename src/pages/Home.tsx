@@ -26,14 +26,7 @@ const Home: React.FC = () => {
             {mounted && (
                 <>
                     <Hero />
-                    <motion.div
-                        initial={{ opacity: 0, y: 40 }}
-                        whileInView={{ opacity: 1, y: 0 }}
-                        viewport={{ once: true }}
-                        transition={{ duration: 0.8, ease: 'easeOut' }}
-                    >
-                        <ServicesSection />
-                    </motion.div>
+                    <ServicesSection />
                     <ProjectsShowcase />
                     <Clients />
                     <CTASection />

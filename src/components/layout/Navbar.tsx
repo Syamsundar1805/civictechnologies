@@ -11,7 +11,6 @@ import Logo from '../../assets/clintlogos/Logo_00008.svg';
 
 const Navbar: React.FC = () => {
     const location = useLocation();
-    const isHome = location.pathname === '/';
 
     const [isScrolled, setIsScrolled] = useState(false);
     const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
@@ -41,12 +40,9 @@ const Navbar: React.FC = () => {
     ];
 
     const navbarBackground = () => {
-        if (isHome) {
-            return isScrolled
-                ? 'bg-white shadow-md py-3'
-                : 'bg-transparent py-5 lg:py-6';
-        }
-        return 'bg-white shadow-sm py-3 lg:py-4';
+        return isScrolled
+            ? 'bg-white shadow-md py-3'
+            : 'bg-white shadow-sm py-3 lg:py-4';
     };
 
     const linkColor = (path: string) => {
@@ -159,8 +155,8 @@ const Navbar: React.FC = () => {
                 </AnimatePresence>
             </nav>
 
-            {/* Spacer only for non-home pages to exactly match the navbar height */}
-            {!isHome && <div className="h-[64px] sm:h-[72px] lg:h-[88px]"></div>}
+            {/* Spacer to exactly match the navbar height */}
+            <div className="h-[64px] sm:h-[72px] lg:h-[88px]"></div>
         </>
     );
 };

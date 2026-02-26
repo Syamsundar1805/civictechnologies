@@ -71,7 +71,7 @@ const ServicesSection = () => {
 
   return (
     <section
-      className="bg-white relative w-full h-auto min-h-screen flex flex-col pt-24 pb-12 overflow-hidden z-30"
+      className="bg-white relative w-full h-auto flex flex-col pt-12 lg:pt-16 pb-12 overflow-hidden z-30"
       onMouseEnter={() => setIsPaused(true)}
       onMouseLeave={() => setIsPaused(false)}
     >
@@ -79,10 +79,10 @@ const ServicesSection = () => {
 
 
       {/* Header */}
-      <div className="container mx-auto px-6 relative z-10 flex-shrink-0 mb-8">
-        <div className="relative flex flex-col items-center">
+      <div className="container mx-auto px-6 max-w-7xl relative z-10 flex-shrink-0 mb-8">
+        <div className="relative flex flex-col items-center w-full">
 
-          <div className="absolute right-0 top-1/2 -translate-y-1/2 hidden md:block z-20">
+          <div className="absolute right-0 top-1/2 -translate-y-1/2 hidden lg:block z-20">
             <motion.button
               whileTap={{ scale: 0.95 }}
               onClick={() => navigate("/services")}
@@ -106,7 +106,7 @@ const ServicesSection = () => {
               accountability, and technical excellence.
             </p>
 
-            <div className="mt-6 md:hidden">
+            <div className="mt-6 lg:hidden">
               <motion.button
                 onClick={() => navigate("/services")}
                 className="px-8 py-3 bg-[#252525] text-white font-bold uppercase tracking-wider rounded-full shadow-lg hover:bg-[#0177B2] transition-colors duration-300"
@@ -121,7 +121,7 @@ const ServicesSection = () => {
       {/* Carousel */}
       <div className="relative w-full h-[60vh] md:h-[65vh] flex-grow flex items-center justify-center">
 
-        <div className="relative w-full h-full overflow-hidden shadow-xl bg-black">
+        <div className="relative w-full h-full overflow-hidden">
 
           <AnimatePresence initial={false} custom={direction}>
             <motion.div
@@ -157,76 +157,81 @@ const ServicesSection = () => {
 
               {/* <div className="absolute inset-0 bg-gradient-to-b from-black/90 via-black/40 to-transparent"></div> */}
               <div className="absolute inset-x-0 top-0 h-[70%] bg-gradient-to-b from-black/90 via-black/40 to-transparent"></div>
-              <div className="absolute inset-0 flex flex-col justify-start px-8 pt-16 md:px-16 md:pt-24 text-white">
-                <div className="max-w-3xl">
-                  <h3 className="text-3xl md:text-5xl lg:text-6xl font-black mb-4 font-primary uppercase tracking-tight leading-tight drop-shadow-lg">
-                    {services[activeIndex].title}
-                  </h3>
+              <div className="absolute inset-0 flex flex-col justify-start pt-16 md:pt-24 text-white pointer-events-none">
+                <div className="container mx-auto px-6 lg:px-12 max-w-7xl w-full">
+                  <div className="max-w-3xl pointer-events-auto">
+                    <h3 className="text-3xl md:text-5xl lg:text-6xl font-black mb-4 font-primary uppercase tracking-tight leading-tight drop-shadow-lg">
+                      {services[activeIndex].title}
+                    </h3>
 
-                  <p className="text-sm md:text-xl text-gray-200 mb-6 max-w-2xl font-medium leading-relaxed hidden sm:block drop-shadow-md">
-                    {services[activeIndex].description}
-                  </p>
+                    <p className="text-sm md:text-xl text-gray-200 mb-6 max-w-2xl font-medium leading-relaxed hidden sm:block drop-shadow-md">
+                      {services[activeIndex].description}
+                    </p>
+                  </div>
                 </div>
               </div>
             </motion.div>
           </AnimatePresence>
 
-          {/* Explore Button */}
-          <div className="absolute bottom-20 md:bottom-12 left-1/2 md:left-24 -translate-x-1/2 md:translate-x-0 z-20 w-max">
-            <button
-              onClick={() => navigate("/services")}
-              className="pointer-events-auto flex items-center gap-2 text-white font-bold text-[10px] sm:text-xs md:text-sm uppercase tracking-wider group border border-white/50 bg-black/30 backdrop-blur-sm rounded-full px-5 py-2 hover:bg-[#0177B2] hover:border-[#0177B2] transition-all duration-300"
-            >
-              <span className="relative z-10 flex items-center gap-2">
-                Explore Service
-                <span className="group-hover:translate-x-1 transition-transform">→</span>
-              </span>
-            </button>
-          </div>
-
-          {/* Navigation */}
-          <div className="absolute bottom-8 left-1/2 -translate-x-1/2 flex items-center gap-4 z-30">
-
-            <button
-              onClick={(e) => {
-                e.stopPropagation();
-                prevSlide();
-              }}
-              className="p-1 text-white/70 hover:text-white transition-all duration-300"
-              aria-label="Previous slide"
-            >
-              <KeyboardArrowLeftIcon fontSize="medium" />
-            </button>
-
-            <div className="flex justify-center gap-3">
-              {services.map((_, idx) => (
+          {/* Controls Overlay Wrapper */}
+          <div className="absolute inset-0 w-full h-full pointer-events-none z-20">
+            <div className="container mx-auto px-6 lg:px-12 max-w-7xl w-full h-full relative">
+              {/* Explore Button */}
+              <div className="absolute top-1/2 lg:top-auto lg:bottom-12 left-1/2 lg:left-12 -translate-x-1/2 -translate-y-1/2 lg:translate-x-0 lg:translate-y-0 w-max pointer-events-auto">
                 <button
-                  key={idx}
+                  onClick={() => navigate("/services")}
+                  className="flex items-center gap-2 text-white font-bold text-[10px] sm:text-xs md:text-sm uppercase tracking-wider group border border-white/50 bg-black/30 backdrop-blur-sm rounded-full px-5 py-2 hover:bg-[#0177B2] hover:border-[#0177B2] transition-all duration-300"
+                >
+                  <span className="relative z-10 flex items-center gap-2">
+                    Explore Service
+                    <span className="group-hover:translate-x-1 transition-transform">→</span>
+                  </span>
+                </button>
+              </div>
+
+              {/* Navigation */}
+              <div className="absolute bottom-8 left-1/2 -translate-x-1/2 flex items-center gap-4 pointer-events-auto">
+                <button
                   onClick={(e) => {
                     e.stopPropagation();
-                    setDirection(idx > activeIndex ? 1 : -1);
-                    setActiveIndex(idx);
+                    prevSlide();
                   }}
-                  className={`h-2 rounded-full transition-all duration-300 ${activeIndex === idx
-                    ? "w-8 bg-[#0177B2]"
-                    : "w-2 bg-white/50 hover:bg-white"
-                    }`}
-                  aria-label={`Go to slide ${idx + 1}`}
-                />
-              ))}
+                  className="p-1 text-white/70 hover:text-white transition-all duration-300"
+                  aria-label="Previous slide"
+                >
+                  <KeyboardArrowLeftIcon fontSize="medium" />
+                </button>
+
+                <div className="flex justify-center gap-3">
+                  {services.map((_, idx) => (
+                    <button
+                      key={idx}
+                      onClick={(e) => {
+                        e.stopPropagation();
+                        setDirection(idx > activeIndex ? 1 : -1);
+                        setActiveIndex(idx);
+                      }}
+                      className={`h-2 rounded-full transition-all duration-300 ${activeIndex === idx
+                        ? "w-8 bg-[#0177B2]"
+                        : "w-2 bg-white/50 hover:bg-white"
+                        }`}
+                      aria-label={`Go to slide ${idx + 1}`}
+                    />
+                  ))}
+                </div>
+
+                <button
+                  onClick={(e) => {
+                    e.stopPropagation();
+                    nextSlide();
+                  }}
+                  className="p-1 text-white/70 hover:text-white transition-all duration-300"
+                  aria-label="Next slide"
+                >
+                  <KeyboardArrowRightIcon fontSize="medium" />
+                </button>
+              </div>
             </div>
-
-            <button
-              onClick={(e) => {
-                e.stopPropagation();
-                nextSlide();
-              }}
-              className="p-1 text-white/70 hover:text-white transition-all duration-300"
-              aria-label="Next slide"
-            >
-              <KeyboardArrowRightIcon fontSize="medium" />
-            </button>
-
           </div>
         </div>
       </div>

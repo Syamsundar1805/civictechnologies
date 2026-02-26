@@ -77,7 +77,7 @@ const ProjectsShowcase: React.FC = () => {
                     animate={inView ? { opacity: 1, y: 0 } : {}}
                     transition={{ duration: 0.8 }}
                 >
-                    <div className="absolute right-0 top-1/2 -translate-y-1/2 hidden md:block z-20">
+                    <div className="absolute right-0 top-1/2 -translate-y-1/2 hidden lg:block z-20">
                         <motion.button
                             whileTap={{ scale: 0.95 }}
                             onClick={() => navigate("/projects")}
@@ -103,7 +103,7 @@ const ProjectsShowcase: React.FC = () => {
                             across industrial and infrastructure sectors.
                         </p>
 
-                        <div className="mt-6 md:hidden">
+                        <div className="mt-6 lg:hidden">
                             <motion.button
                                 onClick={() => navigate("/projects")}
                                 className="px-8 py-3 bg-[#252525] text-white font-bold uppercase tracking-wider rounded-full shadow-lg hover:bg-[#0177B2] transition-colors duration-300"

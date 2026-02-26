@@ -30,16 +30,20 @@ code {
     monospace;
 }
 
-/* Hide Custom scrollbar */
-::-webkit-scrollbar {
-  display: none;
+/* Hide Custom scrollbar universally */
+html::-webkit-scrollbar,
+body::-webkit-scrollbar,
+*::-webkit-scrollbar {
+  display: none !important;
 }
 
 /* Hide scrollbar for IE, Edge and Firefox */
-body {
-  -ms-overflow-style: none;
+html,
+body,
+* {
+  -ms-overflow-style: none !important;
   /* IE and Edge */
-  scrollbar-width: none;
+  scrollbar-width: none !important;
   /* Firefox */
 }
 
