@@ -9,7 +9,7 @@ import BiotechIcon from '@mui/icons-material/Biotech';
 import RestaurantIcon from '@mui/icons-material/Restaurant';
 import ElectricCarIcon from '@mui/icons-material/ElectricCar';
 import CheckCircleOutlineIcon from '@mui/icons-material/CheckCircleOutline';
-import HeroBg from '../assets/clintlogos/hero_bg_img.webp';
+import HeroBg from '../assets/clintlogos/hero_bg_3.jpg';
 import DividerImg from '../assets/clintlogos/download.svg';
 import clenImg from '../assets/industry_images/hospital_icu.webp';
 import NationalImg from '../assets/industry_images/hospital_icu2.webp';

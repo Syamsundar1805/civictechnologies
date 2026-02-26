@@ -64,11 +64,9 @@ const ProjectsShowcase: React.FC = () => {
     ];
 
     return (
-        <section ref={ref} className="py-24 lg:py-32 bg-white relative overflow-hidden">
+        <section ref={ref} className="py-16 lg:py-20 bg-white relative overflow-hidden">
 
-            {/* Subtle Gold Glow */}
-            <div className="absolute top-0 right-0 w-96 h-96 bg-[#0177B2]/10 rounded-full blur-3xl opacity-40 translate-x-1/2 -translate-y-1/2 pointer-events-none"></div>
-            <div className="absolute bottom-0 left-0 w-96 h-96 bg-[#0177B2]/10 rounded-full blur-3xl opacity-40 -translate-x-1/2 translate-y-1/2 pointer-events-none"></div>
+
 
             <div className="container mx-auto px-4 sm:px-6 relative z-10 w-full max-w-7xl">
 

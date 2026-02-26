@@ -9,12 +9,12 @@ const Clients: React.FC = () => {
     });
 
     // Load logos
-    const logoModules = import.meta.glob('../../assets/clintlogos/clint*.webp', { eager: true });
+    const logoModules = import.meta.glob('../../assets/clintlogos/clint*.{webp,png}', { eager: true });
 
     // eslint-disable-next-line @typescript-eslint/no-explicit-any
     const allLogos = Object.entries(logoModules).map(([path, mod]: any) => ({ path, src: mod.default }));
 
-    const specificClients = ['clint1.webp', 'clint4.webp', 'clint5.webp', 'clint7.webp', 'clint10.webp', 'clint13.webp'];
+    const specificClients = ['clint1.webp', 'clint4.webp', 'clint5.webp', 'clint7.webp', 'clint10.webp', 'clint13.webp', 'clint25.png'];
 
     const row1Logos = allLogos.filter(logo => specificClients.some(c => logo.path.endsWith(c))).map(l => l.src);
     const row2Logos = allLogos.filter(logo => !specificClients.some(c => logo.path.endsWith(c))).map(l => l.src);

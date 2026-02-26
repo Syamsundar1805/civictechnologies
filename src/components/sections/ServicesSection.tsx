@@ -39,14 +39,17 @@ const services = [
 const ServicesSection = () => {
   const navigate = useNavigate();
   const [activeIndex, setActiveIndex] = useState(0);
+  const [direction, setDirection] = useState(0);
   const [isPaused, setIsPaused] = useState(false);
   const intervalRef = useRef<ReturnType<typeof setInterval> | null>(null);
 
   const nextSlide = useCallback(() => {
+    setDirection(1);
     setActiveIndex((current) => (current + 1) % services.length);
   }, []);
 
   const prevSlide = useCallback(() => {
+    setDirection(-1);
     setActiveIndex((current) => (current - 1 + services.length) % services.length);
   }, []);
 
@@ -73,8 +76,7 @@ const ServicesSection = () => {
       onMouseLeave={() => setIsPaused(false)}
     >
 
-      {/* Background Glow */}
-      <div className="absolute bottom-0 left-0 w-96 h-96 bg-[#0177B2]/10 rounded-full blur-3xl opacity-40 -translate-x-1/2 translate-y-1/2 pointer-events-none z-0"></div>
+
 
       {/* Header */}
       <div className="container mx-auto px-6 relative z-10 flex-shrink-0 mb-8">
@@ -119,17 +121,33 @@ const ServicesSection = () => {
       {/* Carousel */}
       <div className="relative w-full h-[60vh] md:h-[65vh] flex-grow flex items-center justify-center">
 
-        <div className="relative w-full h-full overflow-hidden shadow-2xl bg-black">
+        <div className="relative w-full h-full overflow-hidden shadow-xl bg-black">
 
-          <AnimatePresence mode="wait">
+          <AnimatePresence initial={false} custom={direction}>
             <motion.div
               key={activeIndex}
-              initial={{ opacity: 0, x: 50 }}
-              animate={{ opacity: 1, x: 0 }}
-              exit={{ opacity: 0, x: -50 }}
-              transition={{ duration: 0.8, ease: "easeInOut" }}
-              className="absolute inset-0 w-full h-full cursor-pointer"
-              onClick={() => navigate("/services")}
+              custom={direction}
+              variants={{
+                enter: (dir: number) => ({ x: dir > 0 ? "100%" : "-100%", opacity: 1, zIndex: 0 }),
+                center: { x: 0, opacity: 1, zIndex: 1 },
+                exit: (dir: number) => ({ x: dir < 0 ? "100%" : "-100%", opacity: 1, zIndex: 0 })
+              }}
+              initial="enter"
+              animate="center"
+              exit="exit"
+              transition={{ duration: 0.6, ease: [0.32, 0.72, 0, 1] }}
+              className="absolute inset-0 w-full h-full cursor-grab active:cursor-grabbing"
+              drag="x"
+              dragConstraints={{ left: 0, right: 0 }}
+              dragElastic={0.2}
+              onDragEnd={(_e, { offset, velocity }) => {
+                const swipeThreshold = 50;
+                if (offset.x < -swipeThreshold || velocity.x < -500) {
+                  nextSlide();
+                } else if (offset.x > swipeThreshold || velocity.x > 500) {
+                  prevSlide();
+                }
+              }}
             >
               <img
                 src={services[activeIndex].image}
@@ -137,8 +155,8 @@ const ServicesSection = () => {
                 className="w-full h-full object-cover"
               />
 
-              <div className="absolute inset-0 bg-gradient-to-b from-black/90 via-black/40 to-transparent"></div>
-
+              {/* <div className="absolute inset-0 bg-gradient-to-b from-black/90 via-black/40 to-transparent"></div> */}
+              <div className="absolute inset-x-0 top-0 h-[70%] bg-gradient-to-b from-black/90 via-black/40 to-transparent"></div>
               <div className="absolute inset-0 flex flex-col justify-start px-8 pt-16 md:px-16 md:pt-24 text-white">
                 <div className="max-w-3xl">
                   <h3 className="text-3xl md:text-5xl lg:text-6xl font-black mb-4 font-primary uppercase tracking-tight leading-tight drop-shadow-lg">
@@ -186,6 +204,7 @@ const ServicesSection = () => {
                   key={idx}
                   onClick={(e) => {
                     e.stopPropagation();
+                    setDirection(idx > activeIndex ? 1 : -1);
                     setActiveIndex(idx);
                   }}
                   className={`h-2 rounded-full transition-all duration-300 ${activeIndex === idx

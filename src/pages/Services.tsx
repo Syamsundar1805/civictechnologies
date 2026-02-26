@@ -12,7 +12,7 @@ import VideocamIcon from '@mui/icons-material/Videocam';
 import SettingsPhoneIcon from '@mui/icons-material/SettingsPhone';
 import VpnKeyIcon from '@mui/icons-material/VpnKey'; import CheckCircleOutlineIcon from '@mui/icons-material/CheckCircleOutline';
 import ArrowForwardIcon from '@mui/icons-material/ArrowForward'; // Added ArrowForwardIcon
-import HeroBg from '../assets/clintlogos/hero_bg_img.webp';
+import HeroBg from '../assets/clintlogos/hero_bg_3.jpg';
 import DividerImg from '../assets/clintlogos/download.svg';
 import IndustrialDemoBg from '../assets/industry_images/Sevilance.webp';
 import GvkBiosciencesImg from '../assets/industry_images/access_controle.webp';
@@ -145,7 +145,7 @@ const Services: React.FC = () => {
                         </div>
 
                         <p className="text-xl md:text-2xl text-blue-100 mt-6 max-w-2xl">
-                            Comprehensive turnkey electronics solutions with precision, accountability, and technical excellence.
+                            Comprehensive electrical turnkey solutions with precision, accountability, and technical excellence.
                         </p>
                     </motion.div>
                 </div>

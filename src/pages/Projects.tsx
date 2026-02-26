@@ -2,7 +2,7 @@
 import { useState } from "react";
 import ScrollToTopArrow from "../components/common/ScrollToTopArrow";
 import ParallaxBackground from "../components/common/ParallaxBackground";
-import HeroBg from "../assets/clintlogos/hero_bg_img.webp";
+import HeroBg from "../assets/clintlogos/hero_bg_3.jpg";
 import DividerImg from "../assets/clintlogos/download.svg";
 import ProjectCard from "../components/projects/ProjectCard";
 import { projects } from "../components/projects/projects";
